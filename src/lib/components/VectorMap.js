@@ -49,6 +49,14 @@ class VectorMap extends React.PureComponent {
         this.$mapObject.setBackgroundColor(color)
     }
 
+    /**
+     * get jvector map object
+     * @returns {null|*}
+     */
+    getMapObject() {
+        return this.$mapObject;
+    }
+
     render() {
         return (
             <div id="container" />
