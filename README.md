@@ -50,6 +50,15 @@ In addition, the plugin currently supports the following props:
 | containerStyle     | object | no       | an inline style object for the map container |
 | containerClassName | string | no       | a class name for the map container           |
 
+## Ref methods
+
+You can allways add a `ref` to your VectorMap and access the following methods (more will be added in the future or upon request):
+
+| method                                                                                              | params         | return type |
+|-----------------------------------------------------------------------------------------------------|----------------|-------------|
+| **setBackgroundColor** <br /> programmatically change the map background color                             | color - string | -           |
+| **getMapObject** <br /> get the jvectormap object for additional options and methods (see jvectormap docs) | -              | object      |
+
 ## Supported [maps]
 
 This plugin is brand new, and currently supports only two type of maps:
