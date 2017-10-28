@@ -1,11 +1,11 @@
 import React from 'react';
 import Example from '../lib';
-import { SecondExample } from '../lib';
+import { VectorMap } from '../lib';
 
 const App = () => (
   <div>
     <Example />
-    <SecondExample />
+    <VectorMap mapName={'world_millx'} />
   </div>
 );
 

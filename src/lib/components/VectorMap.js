@@ -1,15 +1,31 @@
 import React from 'react';
 import './VectorMap.scss';
-// const $ = window.jQuery;
+import PropTypes from 'prop-types';
+import maps from './../maps';
+
 const $ = window.jQuery;
-require('./map');
+
 
 class VectorMap extends React.PureComponent {
 
+    componentWillMount() {
+        const { mapName } = this.props;
+
+        if (mapName && maps.indexOf(mapName) !== -1) {
+            require(`./../maps/${mapName}`);
+        } else {
+            throw new Error(`No such map, please select one of the following: ${maps.join()}`);
+        }
+    }
+
     componentDidMount() {
-        $('#container').vectorMap({
-            map: 'world_mill'
-        });
+        const { mapName } = this.props;
+
+        if (mapName) {
+            $('#container').vectorMap({
+                map: 'world_mill'
+            });
+        }
     }
 
     render() {
@@ -18,5 +34,9 @@ class VectorMap extends React.PureComponent {
         );
     }
 }
+
+VectorMap.propTypes = {
+    mapName: PropTypes.oneOf(maps).isRequired
+};
 
 export default VectorMap;
