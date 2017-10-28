@@ -1,64 +1,53 @@
-# React NPM library starter kit
+# React jvectormap
 
-[![Build Status](https://travis-ci.org/UdiliaInc/create-react-library.svg?branch=master)](https://travis-ci.org/UdiliaInc/create-react-library)
-[![Dependencies](https://img.shields.io/david/udiliaInc/create-react-library.svg)]()
-[![Dev Dependencies](https://img.shields.io/david/dev/udiliaInc/create-react-library.svg)]()
+## About
 
-based on Facebook's <a href="https://github.com/facebookincubator/create-react-app" target="_blank">Create react app</a>
+A simple wrapper for [jvectormap](http://jvectormap.com/)
 
-## Converted to custom setup
+Please feel free to contribute, open issues or just enjoy this library!
 
-Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing one: 
+## Gettings started
 
-* Compile SCSS to css
-* React, JSX, ES6, and Flow syntax support.
-* Language extras beyond ES6 like the object spread operator.
-* A dev server that lints for common errors.
-* Import CSS and image files directly from JavaScript.
-* Autoprefixed CSS, so you don’t need `-webkit` or other prefixes.
-* A `build` script to bundle JS, CSS, and images for production.
+Install the library:
 
-## Getting Started
+    npm install --save react-jvectormap
 
-Clone repo
+Include the jvectormap.css file in your project:
 
-````
-git clone https://github.com/udiliaInc/create-react-library.git
-````
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.css" type="text/css" media="screen"/>
 
-Install dependencies
 
-`npm install` or `yarn install`
+## Example usage
+            <div style={{width: 500, height: 500}}>
+                <VectorMap map={'us_aea'}
+                           backgroundColor="#3b96ce"
+                           ref="map"
+                           containerStyle={{
+                               width: '100%',
+                               height: '100%'
+                           }}
+                           containerClassName="map"
+                />
+            </div>
 
-Start development server
+Will result the following map:
 
-`npm start` or `yarn start`
+<p align="center">
+  <img src="./example.png" width="500" height="500" />
+</p>
 
-Runs the demo app in development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Library files
+## Supported props:
 
-All library files are located inside `src/lib`  
+All the [Map](http://jvectormap.com/documentation/javascript-api/jvm-map/) properties are supported as props.
 
-## Demo app
+Please note that `map` is a required prop, and must be one of the [supported maps](#maps);
 
-Is located inside `src/demo` directory, here you can test your library while developing
+## Supported [maps]
 
-## Testing
+This plugin is brand new, and currently supports only two type of maps:
 
-`npm run test` or `yarn run test`
+* world_mill
+* us_aea
 
-## Build library
-
-`npm run build` or `yarn run build`
-
-Produces production version of library under the `build` folder.
-
-## Publish library
-
-`npm publish`
-
-## Example library built with this starter kit
-
-https://github.com/UdiliaInc/react-under-construction
+**Please feel free to request new maps! just open an issue!**

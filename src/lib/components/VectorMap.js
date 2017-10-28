@@ -33,7 +33,7 @@ class VectorMap extends React.PureComponent {
     componentDidMount() {
         const { map } = this.props;
 
-        this.$node = $('#container');
+        this.$node = $(this.refs.map);
 
         if (map) {
             this.$node.vectorMap({...this.props});
@@ -58,13 +58,29 @@ class VectorMap extends React.PureComponent {
     }
 
     render() {
+
+        const props = {};
+        const { containerStyle, containerClassName } = this.props;
+
+        // append inline style if exists
+        if (containerStyle) {
+            props.style = containerStyle;
+        }
+
+        // append class if exists
+        if (containerClassName) {
+            props.className = containerClassName;
+        }
+
         return (
-            <div id="container" />
+            <div ref="map" {...props} />
         );
     }
 }
 
 VectorMap.propTypes = {
+    containerStyle: PropTypes.object,
+    containerClassName: PropTypes.string,
     map: PropTypes.oneOf(maps).isRequired,
     backgroundColor: PropTypes.string,
     zoomOnScroll: PropTypes.bool,
