@@ -43,6 +43,13 @@ All the [Map](http://jvectormap.com/documentation/javascript-api/jvm-map/) prope
 
 Please note that `map` is a required prop, and must be one of the [supported maps](#maps);
 
+In addition, the plugin currently supports the following props:
+
+| prop               | type   | required | description                                  |
+|--------------------|--------|----------|----------------------------------------------|
+| containerStyle     | object | no       | an inline style object for the map container |
+| containerClassName | string | no       | a class name for the map container           |
+
 ## Supported [maps]
 
 This plugin is brand new, and currently supports only two type of maps:
