@@ -5,7 +5,7 @@ import { VectorMap } from '../lib';
 const App = () => (
   <div>
     <Example />
-    <VectorMap mapName={'world_millx'} />
+    <VectorMap mapName={'us_aea'} />
   </div>
 );
 

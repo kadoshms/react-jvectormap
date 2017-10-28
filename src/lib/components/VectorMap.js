@@ -23,7 +23,7 @@ class VectorMap extends React.PureComponent {
 
         if (mapName) {
             $('#container').vectorMap({
-                map: 'world_mill'
+                map: mapName
             });
         }
     }

@@ -1,3 +1,4 @@
 export default [
-    'world_mill'
+    'world_mill',
+    'us_aea'
 ];
