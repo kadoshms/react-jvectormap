@@ -8,24 +8,45 @@ const $ = window.jQuery;
 
 class VectorMap extends React.PureComponent {
 
-    componentWillMount() {
-        const { mapName } = this.props;
+    constructor(props) {
+        super(props);
 
-        if (mapName && maps.indexOf(mapName) !== -1) {
-            require(`./../maps/${mapName}`);
+        this.$node = null;
+        this.$mapObject = null;
+    }
+    /**
+     * load required map
+     */
+    componentWillMount() {
+        const { map } = this.props;
+
+        if (map && maps.indexOf(map) !== -1) {
+            require(`./../maps/${map}`);
         } else {
             throw new Error(`No such map, please select one of the following: ${maps.join()}`);
         }
     }
 
+    /**
+     * generate the map
+     */
     componentDidMount() {
-        const { mapName } = this.props;
+        const { map } = this.props;
 
-        if (mapName) {
-            $('#container').vectorMap({
-                map: mapName
-            });
+        this.$node = $('#container');
+
+        if (map) {
+            this.$node.vectorMap({...this.props});
+            this.$mapObject = this.$node.vectorMap('get', 'mapObject');
         }
+    }
+
+    /**
+     * set map background color
+     * @param color
+     */
+    setBackgroundColor(color) {
+        this.$mapObject.setBackgroundColor(color)
     }
 
     render() {
@@ -36,7 +57,8 @@ class VectorMap extends React.PureComponent {
 }
 
 VectorMap.propTypes = {
-    mapName: PropTypes.oneOf(maps).isRequired
+    map: PropTypes.oneOf(maps).isRequired,
+    backgroundColor: PropTypes.string
 };
 
 export default VectorMap;
