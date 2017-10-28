@@ -1,5 +1,4 @@
 import React from 'react';
-import Example from '../lib';
 import { VectorMap } from '../lib';
 
 class App extends React.Component {
@@ -11,7 +10,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Example />
                 <VectorMap map={'us_aea'}
                            backgroundColor="#FFFFFF"
                            ref="map"
