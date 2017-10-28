@@ -1,8 +1,8 @@
 import Example from './components/Example';
-import SecondExample from './components/SecondExample';
+import VectorMap from './components/VectorMap';
 
 export default Example;
 export {
-  SecondExample
+    VectorMap
 };
 

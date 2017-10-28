@@ -1,10 +1,10 @@
 import React from 'react';
-import './SecondExample.scss';
+import './VectorMap.scss';
 // const $ = window.jQuery;
 const $ = window.jQuery;
 require('./map');
 
-class SecondExample extends React.PureComponent {
+class VectorMap extends React.PureComponent {
 
     componentDidMount() {
         $('#container').vectorMap({
@@ -19,4 +19,4 @@ class SecondExample extends React.PureComponent {
     }
 }
 
-export default SecondExample;
+export default VectorMap;
