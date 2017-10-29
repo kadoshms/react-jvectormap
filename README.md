@@ -33,7 +33,7 @@ Include the jvectormap.css file in your project:
 Will result the following map:
 
 <p align="center">
-  <img src="./example.png" width="500" height="500" />
+  <img src="https://github.com/kadoshms/react-jvectormap/raw/master/example.png" width="500" height="500" />
 </p>
 
 
