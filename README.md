@@ -65,5 +65,6 @@ This plugin is brand new, and currently supports only two type of maps:
 
 * world_mill
 * us_aea
+* continents_mill
 
 **Please feel free to request new maps! just open an issue!**
