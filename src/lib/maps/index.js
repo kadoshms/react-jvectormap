@@ -1,5 +1,6 @@
 export default [
     'world_mill',
     'us_aea',
-    'europe_mill'
+    'europe_mill',
+    'continents_mill'
 ];
