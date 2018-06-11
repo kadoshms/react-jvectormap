@@ -15,7 +15,7 @@ module.exports = {
     bail: true,
     // Generate source maps
     devtool: shouldUseSourceMap ? 'source-map' : false,
-    entry: ['jquery', 'jvectormap', paths.appLibIndexJs],
+    entry: ['jquery', 'jvectormap-next', paths.appLibIndexJs],
     output: {
         path: paths.appBuild,
         filename: 'index.js',
