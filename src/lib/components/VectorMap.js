@@ -5,7 +5,6 @@ import maps from './../maps';
 
 const $ = window.jQuery;
 
-
 class VectorMap extends React.PureComponent {
 
     constructor(props) {
