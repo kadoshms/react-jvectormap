@@ -41,6 +41,21 @@ class VectorMap extends React.PureComponent {
     }
 
     /**
+     * re-render map with props change
+     */
+    componentDidUpdate() {
+        const { map } = this.props;
+
+        this.$node = $(this.refs.map);
+        this.$node.empty(); // remove old one
+
+        if (map) {
+        this.$node.vectorMap({ ...this.props });
+        this.$mapObject = this.$node.vectorMap("get", "mapObject");
+        }
+    }
+
+    /**
      * set map background color
      * @param color
      */
