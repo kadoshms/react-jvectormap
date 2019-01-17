@@ -13,7 +13,7 @@ class App extends React.Component {
     render() {
         return (
             <div style={{width: 500, height: 500}}>
-                <VectorMap map={'asia_mill'}
+                <VectorMap map={'ca_lcc'}
                            backgroundColor="#3b96ce"
                            ref="map"
                            containerStyle={{
