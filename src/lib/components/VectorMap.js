@@ -10,6 +10,7 @@ class VectorMap extends React.PureComponent {
     constructor(props) {
         super(props);
 
+        this.mapId = null;
         this.$node = null;
         this.$mapObject = null;
     }
@@ -21,8 +22,12 @@ class VectorMap extends React.PureComponent {
 
         if (map && maps.indexOf(map) !== -1) {
             require(`./../maps/${map}`);
-        } else {
+            this.mapId = map;
+        } else if (typeof map === "string") {
             throw new Error(`No such map, please select one of the following: ${maps.join()}`);
+        } else {
+            this.mapId = "$from_Object";
+            $.fn.vectorMap('addMap', this.mapId, map);
         }
     }
 
@@ -30,12 +35,11 @@ class VectorMap extends React.PureComponent {
      * generate the map
      */
     componentDidMount() {
-        const { map } = this.props;
-
         this.$node = $(this.refs.map);
 
-        if (map) {
-            this.$node.vectorMap({...this.props});
+        if (this.mapId) {
+            let newProps = Object.assign({}, this.props, {map: this.mapId});
+            this.$node.vectorMap({...newProps});
             this.$mapObject = this.$node.vectorMap('get', 'mapObject');
         }
     }
@@ -44,14 +48,13 @@ class VectorMap extends React.PureComponent {
      * re-render map with props change
      */
     componentDidUpdate() {
-        const { map } = this.props;
-
         this.$node = $(this.refs.map);
         this.$node.empty(); // remove old one
 
-        if (map) {
-        this.$node.vectorMap({ ...this.props });
-        this.$mapObject = this.$node.vectorMap("get", "mapObject");
+        if (this.mapId) {
+            let newProps = Object.assign({}, this.props, {map: this.mapId});
+            this.$node.vectorMap({...newProps});
+            this.$mapObject = this.$node.vectorMap("get", "mapObject");
         }
     }
 
@@ -95,7 +98,10 @@ class VectorMap extends React.PureComponent {
 VectorMap.propTypes = {
     containerStyle: PropTypes.object,
     containerClassName: PropTypes.string,
-    map: PropTypes.oneOf(maps).isRequired,
+    map: PropTypes.oneOfType([
+        PropTypes.oneOf(maps),
+        PropTypes.object
+    ]).isRequired,
     backgroundColor: PropTypes.string,
     zoomOnScroll: PropTypes.bool,
     zoomOnScrollSpeed: PropTypes.bool,
