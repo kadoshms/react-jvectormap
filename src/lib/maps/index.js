@@ -10,5 +10,6 @@ export default [
     'north_america_mill',
     'south_america_mill',
     'ca_lcc',
-    'brazil'
+    'brazil',
+    'se_mill'
 ];

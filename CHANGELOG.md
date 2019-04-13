@@ -5,5 +5,8 @@
 * added support for continent maps, Canada map (ca_lcc)
 * bug fixes
 
-## (0.0.5) 01/25/2017
+## (0.0.5) 01/25/2019
 * added support for Brazil map
+
+## (0.0.7) 04/13/2019
+* added support for Sweden map
