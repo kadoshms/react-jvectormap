@@ -75,5 +75,7 @@ This plugin is brand new, and currently supports only two type of maps:
 * south_america_mill
 * ca_lcc
 * brazil
+* se_mill
+* es_mill
 
 **Please feel free to request new maps! just open an issue!**

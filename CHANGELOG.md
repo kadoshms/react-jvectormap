@@ -10,3 +10,6 @@
 
 ## (0.0.7) 04/13/2019
 * added support for Sweden map
+
+## (0.0.8) 04/25/2019
+* added support for Spain map
