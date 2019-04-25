@@ -112,7 +112,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "jquery-mousewheel": "^3.1.13",
     "jvectormap-next": "^3.0.0",
     "prop-types": "^15.6.0"
