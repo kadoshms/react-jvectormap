@@ -12,5 +12,6 @@ export default [
     'ca_lcc',
     'brazil',
     'se_mill',
-    'es_mill'
+    'es_mill',
+    'ar_mill'
 ];

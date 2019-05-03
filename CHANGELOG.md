@@ -13,3 +13,6 @@
 
 ## (0.0.8) 04/25/2019
 * added support for Spain map
+
+## (0.0.11) 04/03/2019
+* added support for Argentina map
