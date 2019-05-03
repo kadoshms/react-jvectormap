@@ -48,7 +48,7 @@
     "html-webpack-plugin": "2.29.0",
     "imports-loader": "^0.7.1",
     "jest": "20.0.4",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
@@ -115,6 +115,7 @@
     "jquery": "^3.4.0",
     "jquery-mousewheel": "^3.1.13",
     "jvectormap-next": "^3.0.0",
+    "npm": "^6.9.0",
     "prop-types": "^15.6.0"
   }
 }
