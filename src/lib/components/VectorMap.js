@@ -53,6 +53,11 @@ class VectorMap extends React.PureComponent {
         this.$node.vectorMap({ ...this.props });
         this.$mapObject = this.$node.vectorMap("get", "mapObject");
         }
+        let jvectormapTips = document.getElementsByClassName('jvectormap-tip');
+        if (jvectormapTips.length > 1){
+            let extraTip = jvectormapTips[0];
+            extraTip.parentNode.removeChild(extraTip);
+        }
     }
 
     /**
