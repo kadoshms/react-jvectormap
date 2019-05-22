@@ -1,6 +1,6 @@
 {
   "name": "react-jvectormap",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "A jvectormap wrapper for React apps",
   "main": "build/index.js",
   "scripts": {
