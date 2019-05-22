@@ -14,5 +14,6 @@ export default [
     'se_mill',
     'es_mill',
     'ar_mill',
-    'vietnam'
+    'vietnam',
+	'uk_map'
 ];
