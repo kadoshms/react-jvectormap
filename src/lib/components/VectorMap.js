@@ -26,7 +26,7 @@ class VectorMap extends React.PureComponent {
         } else if (typeof map === "string") {
             throw new Error(`No such map, please select one of the following: ${maps.join()}`);
         } else {
-            this.mapId = "$from_Object";
+            this.mapId = "$from_Object" + Math.random();
             $.fn.vectorMap('addMap', this.mapId, map);
         }
     }
