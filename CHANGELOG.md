@@ -22,3 +22,4 @@
 
 ## (0.0.13) 09/30/2019
 * added support for France map (fr_mill)
+* added support for Indonesia map (indonesia), thanks @davchezt

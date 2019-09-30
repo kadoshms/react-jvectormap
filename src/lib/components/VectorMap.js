@@ -50,8 +50,8 @@ class VectorMap extends React.PureComponent {
         this.$node.empty(); // remove old one
 
         if (map) {
-        this.$node.vectorMap({ ...this.props });
-        this.$mapObject = this.$node.vectorMap("get", "mapObject");
+            this.$node.vectorMap({ ...this.props });
+            this.$mapObject = this.$node.vectorMap("get", "mapObject");
         }
     }
 
