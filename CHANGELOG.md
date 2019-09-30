@@ -19,3 +19,6 @@
 
 ## (0.0.12) 05/22/2019
 * added support for Vietnam map
+
+## (0.0.13) 09/30/2019
+* added support for France map (fr_mill)
