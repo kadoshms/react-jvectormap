@@ -16,5 +16,6 @@ export default [
     'ar_mill',
     'vietnam',
     'fr_mill',
-    'indonesia'
+    'indonesia',
+    'th_mill'
 ];

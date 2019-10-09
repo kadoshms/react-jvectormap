@@ -142,7 +142,8 @@ VectorMap.propTypes = {
     onMarkerOut: PropTypes.func,
     onMarkerClick: PropTypes.func,
     onMarkerSelected: PropTypes.func,
-    onViewportChange: PropTypes.func
+    onViewportChange: PropTypes.func,
+    zoomButtons: PropTypes.bool
 };
 
 export default VectorMap;
