@@ -23,3 +23,7 @@
 ## (0.0.13) 09/30/2019
 * added support for France map (fr_mill)
 * added support for Indonesia map (indonesia), thanks @davchezt
+
+## (0.0.14) 10/09/2019
+* added support for Thailand map (th_mill)
+* added support for Germany map (de_mill)

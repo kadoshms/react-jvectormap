@@ -78,5 +78,9 @@ This plugin is brand new, and currently supports only two type of maps:
 * se_mill
 * es_mill
 * vietnam
+* indonesia
+* th_mill
+* de_mill
+* ar_mill
 
 **Please feel free to request new maps! just open an issue!**
