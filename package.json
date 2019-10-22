@@ -1,5 +1,5 @@
 {
-  "name": "react-jvectormap",
+  "name": "@pangaeatech/react-jvectormap",
   "version": "0.0.5",
   "description": "A jvectormap wrapper for React apps",
   "main": "build/index.js",
