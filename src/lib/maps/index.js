@@ -18,5 +18,8 @@ export default [
     'fr_mill',
     'indonesia',
     'th_mill',
-    'de_mill'
+    'de_mill',
+    'au_mill',
+    'kr_mill',
+    'co_mill'
 ];
