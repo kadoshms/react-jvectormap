@@ -27,3 +27,8 @@
 ## (0.0.14) 10/09/2019
 * added support for Thailand map (th_mill)
 * added support for Germany map (de_mill)
+
+## (0.0.15) 11/23/2019
+* added support for Australia map (au_mill)
+* added support for South Korea map (kr_mill)
+* added support for Colombia map (co_mill)

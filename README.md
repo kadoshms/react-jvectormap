@@ -82,5 +82,8 @@ This plugin is brand new, and currently supports only two type of maps:
 * th_mill
 * de_mill
 * ar_mill
+* au_mill
+* kr_mill
+* co_mill
 
 **Please feel free to request new maps! just open an issue!**
