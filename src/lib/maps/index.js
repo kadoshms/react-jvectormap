@@ -21,5 +21,8 @@ export default [
     'de_mill',
     'au_mill',
     'kr_mill',
-    'co_mill'
+    'co_mill',
+    'in_mill',
+    'fr_regions_mill',
+    'ru_mill',
 ];

@@ -32,3 +32,8 @@
 * added support for Australia map (au_mill)
 * added support for South Korea map (kr_mill)
 * added support for Colombia map (co_mill)
+
+## (0.0.16) 11/23/2019
+* added support for Russia map (ru_mill)
+* added support for India map (in_mill)
+* added support for France map (fr_regions_mill)

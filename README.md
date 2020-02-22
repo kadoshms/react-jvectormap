@@ -59,9 +59,7 @@ You can allways add a `ref` to your VectorMap and access the following methods (
 | **setBackgroundColor** <br /> programmatically change the map background color                             | color - string | -           |
 | **getMapObject** <br /> get the jvectormap object for additional options and methods (see jvectormap docs) | -              | object      |
 
-## Supported [maps]
-
-This plugin is brand new, and currently supports only two type of maps:
+## Supported Maps
 
 * world_mill
 * us_aea
