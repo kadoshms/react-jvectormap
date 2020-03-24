@@ -83,5 +83,7 @@ You can allways add a `ref` to your VectorMap and access the following methods (
 * au_mill
 * kr_mill
 * co_mill
+* fr_regions_2016_merc
+* fr_merc
 
 **Please feel free to request new maps! just open an issue!**
