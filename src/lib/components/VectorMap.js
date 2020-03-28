@@ -19,9 +19,7 @@ class VectorMap extends React.PureComponent {
     componentWillMount() {
         const { map } = this.props;
 
-        if (map && maps.indexOf(map) !== -1) {
-            require(`./../maps/${map}`);
-        } else {
+        if (!map || maps.indexOf(map) === -1) {
             throw new Error(`No such map, please select one of the following: ${maps.join()}`);
         }
     }
@@ -74,7 +72,10 @@ class VectorMap extends React.PureComponent {
     render() {
 
         const props = {};
-        const { containerStyle, containerClassName } = this.props;
+        const { map, containerStyle, containerClassName } = this.props;
+
+        // load map
+        require(`./../maps/${map}`);
 
         // append inline style if exists
         if (containerStyle) {
