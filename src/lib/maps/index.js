@@ -25,4 +25,6 @@ export default [
     'in_mill',
     'fr_regions_mill',
     'ru_mill',
+    'fr_regions_2016_merc',
+    'fr_merc',
 ];
