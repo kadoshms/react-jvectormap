@@ -14,12 +14,14 @@ class VectorMap extends React.PureComponent {
         this.$mapObject = null;
     }
     /**
-     * load required map
+     * load the map
      */
-    componentWillMount() {
+    loadMap() {
         const { map } = this.props;
 
-        if (map && maps.indexOf(map) !== -1) {
+        if (!map) {
+          return;
+        } else if (maps.indexOf(map) !== -1) {
             require(`./../maps/${map}`);
         } else {
             throw new Error(`No such map, please select one of the following: ${maps.join()}`);
@@ -27,10 +29,18 @@ class VectorMap extends React.PureComponent {
     }
 
     /**
+     * load required map
+     */
+    componentDidUpdate(prevProps) {
+    }
+
+    /**
      * generate the map
      */
     componentDidMount() {
         const { map } = this.props;
+
+        this.loadMap();
 
         this.$node = $(this.refs.map);
 
@@ -43,8 +53,12 @@ class VectorMap extends React.PureComponent {
     /**
      * re-render map with props change
      */
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
         const { map } = this.props;
+
+        if (prevProps.map !== map) {
+          this.loadMap();
+        }
 
         this.$node = $(this.refs.map);
         this.$node.empty(); // remove old one
