@@ -2,14 +2,16 @@ import React from 'react';
 import './VectorMap.scss';
 import PropTypes from 'prop-types';
 import maps from './../maps';
+import jVectorMapNext from 'jvectormap-next';
 
 const $ = window.jQuery;
+jVectorMapNext($);
 
 class VectorMap extends React.PureComponent {
 
     constructor(props) {
         super(props);
-
+        this.mapRef = React.createRef();
         this.$node = null;
         this.$mapObject = null;
     }
@@ -31,8 +33,8 @@ class VectorMap extends React.PureComponent {
      */
     componentDidMount() {
         const { map } = this.props;
-
-        this.$node = $(this.refs.map);
+        
+        this.$node = $(this.mapRef.current);
 
         if (map) {
             this.$node.vectorMap({...this.props});
@@ -46,7 +48,7 @@ class VectorMap extends React.PureComponent {
     componentDidUpdate() {
         const { map } = this.props;
 
-        this.$node = $(this.refs.map);
+        this.$node = $(this.mapRef.current);
         this.$node.empty(); // remove old one
 
         if (map) {
@@ -87,7 +89,7 @@ class VectorMap extends React.PureComponent {
         }
 
         return (
-            <div ref="map" {...props} />
+            <div ref={this.mapRef} {...props} />
         );
     }
 }
