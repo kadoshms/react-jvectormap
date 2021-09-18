@@ -1,8 +1,16 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es5",
-    "sourceMap": true
+    "module": "esnext",
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true
   },
   "exclude": [
     "node_modules"

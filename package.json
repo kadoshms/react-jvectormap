@@ -2,6 +2,7 @@
   "name": "react-jvectormap",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "git@github.com:kadoshms/react-jvectormap.git",
   "author": "Mor Kadosh <kadoshms@gmail.com>",
   "license": "MIT",
@@ -9,10 +10,9 @@
     "build": "lerna run build",
     "pre-commit": "lint-staged"
   },
-  "peerDependencies": {
-    "react": "~17.0.2",
-    "react-dom": "~17.0.2"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "lint-staged": {
     "packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
@@ -31,8 +31,7 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "rimraf": "^3.0.2"
   }
 }
