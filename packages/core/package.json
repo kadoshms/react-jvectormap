@@ -1,0 +1,27 @@
+{
+  "name": "react-jvectormap-core",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Mor Kadosh <kadoshms@gmail.com>",
+  "homepage": "https://github.com/kadoshms/react-jvectormap#readme",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadoshms/react-jvectormap.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc src/* --outDir dist"
+  },
+  "bugs": {
+    "url": "https://github.com/kadoshms/react-jvectormap/issues"
+  }
+}
