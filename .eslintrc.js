@@ -3,6 +3,7 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
+    "plugin:react-hooks/recommended",
   ],
   plugins: ["prettier"],
   parserOptions: {
@@ -27,7 +28,7 @@ module.exports = {
         selector: "interface",
         format: ["PascalCase"],
         custom: {
-          regex: "^I[A-Z]",
+          regex: "^I[A-Z]|(JQuery|Window)",
           match: true,
         },
       },
