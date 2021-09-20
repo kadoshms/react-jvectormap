@@ -1,3 +1,5 @@
+import { Ref } from "react";
+
 export interface IVectorMapProps {
   /**
    * Name to be used as the map identifier
@@ -7,6 +9,10 @@ export interface IVectorMapProps {
    * Map content definition
    */
   content: IMapContent;
+  /**
+   * Optional ref for accessing map methods
+   */
+  mapRef: Ref<JQuery | null>;
   /**
    * Background color of the map in CSS format.
    */
@@ -19,6 +25,10 @@ export interface IVectorMapProps {
    * Indicates the maximum zoom ratio which could be reached zooming the map. Default value is 8.
    */
   zoomMax?: number;
+  /**
+   * This parameter sets the initial position and scale of the map viewport.
+   */
+  focusOn: IFocus;
 }
 
 interface IBBox {
@@ -39,8 +49,6 @@ interface IProjection {
   centralMeridian: number;
 }
 
-type PathsDefinition = { [key: string]: { path: string; name: string } };
-
 interface IMapContent {
   insets: IInset[];
   paths: PathsDefinition;
@@ -48,3 +56,15 @@ interface IMapContent {
   width: number;
   projection: IProjection;
 }
+
+interface IFocus {
+  scale: number;
+  x: number;
+  y: number;
+  region?: string;
+  lat?: number;
+  lng?: number;
+  animate?: boolean;
+}
+
+type PathsDefinition = { [key: string]: { path: string; name: string } };
