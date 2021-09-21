@@ -5,6 +5,7 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": false,
+    "types": ["./typings.d.ts"]
   }
 }

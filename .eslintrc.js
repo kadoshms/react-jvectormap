@@ -34,5 +34,5 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: [],
+  ignorePatterns: ["packages/*/**/webpack.config.js"],
 };

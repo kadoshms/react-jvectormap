@@ -6,7 +6,6 @@
   "homepage": "https://github.com/kadoshms/react-jvectormap#readme",
   "license": "ISC",
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
@@ -26,18 +25,20 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && webpack --mode development"
   },
   "bugs": {
     "url": "https://github.com/kadoshms/react-jvectormap/issues"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.6",
+    "@types/react": "^17.0.24",
     "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "jvectormap-next": "^3.0.0"
+    "jvectormap-next": "^3.0.0",
+    "classnames": "^2.3.1"
   }
 }

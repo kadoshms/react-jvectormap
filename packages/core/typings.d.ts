@@ -9,3 +9,7 @@ declare global {
     vectorMap(...args: unknown[]): JQuery;
   }
 }
+
+declare module "jvectormap-next";
+
+declare module "*.module.css";

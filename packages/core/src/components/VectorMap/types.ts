@@ -1,4 +1,4 @@
-import { Ref } from "react";
+import { Ref, CSSProperties } from "react";
 
 export interface IVectorMapProps {
   /**
@@ -13,6 +13,14 @@ export interface IVectorMapProps {
    * Optional ref for accessing map methods
    */
   mapRef: Ref<JQuery | null>;
+  /**
+   * Container class Name
+   */
+  className?: string;
+  /**
+   * Container inline CSS-in-JS style
+   */
+  style?: CSSProperties;
   /**
    * Background color of the map in CSS format.
    */

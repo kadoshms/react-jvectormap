@@ -7,11 +7,15 @@ import React, {
 } from "react";
 import $ from "jquery";
 import { IVectorMapProps } from "./types";
+import classNames from "classnames";
+import styles from "./styles.module.scss";
 
 export const VectorMap: FC<IVectorMapProps> = ({
   name,
   content,
   mapRef,
+  style,
+  className,
   ...props
 }) => {
   const containerRef = useRef<JQuery | null>(null);
@@ -38,7 +42,8 @@ export const VectorMap: FC<IVectorMapProps> = ({
 
   return (
     <div
-      style={{ width: 500, height: 500 }}
+      style={style}
+      className={classNames(styles.root, className)}
       ref={containerRef as Ref<HTMLDivElement>}
     />
   );
