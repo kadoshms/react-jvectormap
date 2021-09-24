@@ -6,6 +6,6 @@
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": false,
-    "types": ["./typings.d.ts"]
+    "types": ["typings.d.ts"]
   }
 }

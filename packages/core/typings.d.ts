@@ -12,4 +12,4 @@ declare global {
 
 declare module "jvectormap-next";
 
-declare module "*.module.css";
+declare module "*.scss";
