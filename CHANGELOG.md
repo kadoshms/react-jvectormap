@@ -37,3 +37,7 @@
 * added support for Russia map (ru_mill)
 * added support for India map (in_mill)
 * added support for France map (fr_regions_mill)
+
+## (0.0.17) 24/09/2021
+* added support for Italy map (it_mill)
+* added support for Italy map (it_regions_mill)
