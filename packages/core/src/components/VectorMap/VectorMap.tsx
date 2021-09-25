@@ -11,8 +11,7 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 
 export const VectorMap: FC<IVectorMapProps> = ({
-  name,
-  content,
+  map,
   mapRef,
   style,
   className,
@@ -20,6 +19,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
 }) => {
   const containerRef = useRef<JQuery | null>(null);
   useLayoutEffect(() => {
+    const { name, content } = map;
     $.fn.vectorMap("addMap", name, content);
     if (containerRef.current) {
       $(containerRef.current).vectorMap({
@@ -38,7 +38,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
         (mapRef as MutableRefObject<JQuery>).current.remove();
       }
     };
-  }, [content, mapRef, name, props]);
+  }, [map, mapRef, props]);
 
   return (
     <div

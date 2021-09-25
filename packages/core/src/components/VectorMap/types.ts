@@ -2,13 +2,9 @@ import { Ref, CSSProperties } from "react";
 
 export interface IVectorMapProps {
   /**
-   * Name to be used as the map identifier
-   */
-  name: string;
-  /**
    * Map content definition
    */
-  content: IMapContent;
+  map: IVectorMap;
   /**
    * Optional ref for accessing map methods
    */
@@ -119,12 +115,15 @@ interface IProjection {
   centralMeridian: number;
 }
 
-interface IMapContent {
-  insets: IInset[];
-  paths: PathsDefinition;
-  height: number;
-  width: number;
-  projection: IProjection;
+interface IVectorMap {
+  name: string;
+  content: {
+    insets: IInset[];
+    paths: PathsDefinition;
+    height: number;
+    width: number;
+    projection: IProjection;
+  };
 }
 
 interface IFocus {
