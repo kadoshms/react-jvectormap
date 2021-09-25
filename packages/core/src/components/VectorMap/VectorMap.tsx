@@ -18,6 +18,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
   ...props
 }) => {
   const containerRef = useRef<JQuery | null>(null);
+  console.log(props.markers);
   useLayoutEffect(() => {
     const { name, content } = map;
     $.fn.vectorMap("addMap", name, content);

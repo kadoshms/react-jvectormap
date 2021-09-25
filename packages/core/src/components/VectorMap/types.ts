@@ -57,6 +57,7 @@ export interface IVectorMapProps {
    * Allow only one region to be selected at the moment. Default value is false.
    */
   regionsSelectableOne?: boolean;
+  markers?: Marker[];
   /**
    * When set to true markers on the map could be selected. Default value is false.
    */
@@ -172,3 +173,10 @@ interface IRegion {
   attribute: Attribute;
   normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
 }
+
+type Marker = {
+  name: string;
+  latLng?: [number, number];
+  coords?: [number, number];
+  style: CSSProperties;
+};
