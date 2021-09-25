@@ -1,3 +1,15 @@
+:global(.jvectormap-tip) {
+  position: absolute;
+  display: none;
+  border: solid 1px #cdcdcd;
+  border-radius: 3px;
+  background: #292929;
+  color: white;
+  font-family: sans-serif, Verdana;
+  font-size: smaller;
+  padding: 3px;
+}
+
 .root {
   :global(svg) {
     touch-action: none;
@@ -8,17 +20,6 @@
     position: relative;
     overflow: hidden;
     touch-action: none;
-  }
-  :global(.jvectormap-tip) {
-    position: absolute;
-    display: none;
-    border: solid 1px #cdcdcd;
-    border-radius: 3px;
-    background: #292929;
-    color: white;
-    font-family: sans-serif, Verdana;
-    font-size: smaller;
-    padding: 3px;
   }
   :global(.jvectormap-zoomin) {
     position: absolute;
@@ -55,7 +56,6 @@
     left: 10px;
     border-radius: 3px;
     background: #292929;
-    padding: 3px;
     color: white;
     cursor: pointer;
     line-height: 10px;

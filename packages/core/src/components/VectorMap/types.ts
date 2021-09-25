@@ -95,6 +95,10 @@ export interface IVectorMapProps {
    * examples: ["US-CA"] | { "US-CA": true } | "US-CA"
    */
   selectedRegions?: string[] | { [region: string]: boolean } | string;
+  /**
+   * Object with two keys: markers and regions. Each of which is an array of series configs to be applied to the respective map elements.
+   */
+  series?: ISeries;
 }
 
 interface IBBox {
@@ -149,3 +153,22 @@ interface IImageElementStyleAttributes {
 }
 
 type PathsDefinition = { [key: string]: { path: string; name: string } };
+
+interface ISeries {
+  regions: IRegion[];
+}
+
+type Scale = { [key: string]: string } | string[];
+
+type Values = { [key: string]: string | number };
+
+type Attribute = "fill" | "stroke" | "fill-opacity" | "stroke-opacity";
+
+type NormalizeFunctionType = "linear" | "polynomial";
+
+interface IRegion {
+  scale: Scale;
+  values: Values;
+  attribute: Attribute;
+  normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
+}
