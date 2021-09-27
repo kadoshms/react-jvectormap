@@ -1,4 +1,4 @@
-export const usAea = {
+export default {
   name: "us_aea",
   content: {
     insets: [

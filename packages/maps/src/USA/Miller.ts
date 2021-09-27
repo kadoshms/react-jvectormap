@@ -1,4 +1,4 @@
-export const usMill = {
+export default {
   name: "us_mill",
   content: {
     insets: [
