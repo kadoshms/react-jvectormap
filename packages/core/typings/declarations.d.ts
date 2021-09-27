@@ -13,6 +13,6 @@ declare global {
 declare module "jvectormap-next";
 
 declare module "*.scss" {
-  const content: { [className: string]: string };
-  export = content;
+  const styles: { [className: string]: string };
+  export default styles;
 }

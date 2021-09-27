@@ -1,5 +1,5 @@
 {
-  "name": "react-jvectormap",
+  "name": "@react-jvectormap/core",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Mor Kadosh <kadoshms@gmail.com>",
@@ -25,7 +25,9 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rimraf dist && webpack --mode development"
+    "build": "rimraf dist && yarn run build:types && yarn run build:bundle",
+    "build:bundle": "webpack --mode production",
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "bugs": {
     "url": "https://github.com/kadoshms/react-jvectormap/issues"
