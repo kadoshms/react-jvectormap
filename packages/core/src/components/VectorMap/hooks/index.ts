@@ -1,1 +1,0 @@
-export { useVectorMap } from "./useVectorMap";
