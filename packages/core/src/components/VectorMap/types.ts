@@ -1,4 +1,5 @@
 import { Ref, CSSProperties } from "react";
+import * as events from "events";
 
 export interface IVectorMapProps {
   /**
@@ -57,6 +58,9 @@ export interface IVectorMapProps {
    * Allow only one region to be selected at the moment. Default value is false.
    */
   regionsSelectableOne?: boolean;
+  /**
+   * Set of markers to add to the map during initialization. In case of array is provided, codes of markers will be set as string representations of array indexes. Each marker is represented by latLng (array of two numeric values), name (string which will be show on marker's tip) and any marker styles.
+   */
   markers?: Marker[];
   /**
    * When set to true markers on the map could be selected. Default value is false.
@@ -75,6 +79,10 @@ export interface IVectorMapProps {
    */
   regionLabelStyle?: ISVGElementStyleAttributes;
   /**
+   * Set initially selected markers.
+   */
+  selectedMarkers: string[] | { [region: string]: boolean } | string;
+  /**
    * Set the styles for the map's markers. Any parameter suitable for regionStyle could be used as well as numeric parameter r to set the marker's radius.
    */
   markerStyle?: ISVGElementStyleAttributes | IImageElementStyleAttributes;
@@ -91,6 +99,47 @@ export interface IVectorMapProps {
     isSelected: boolean,
     selectedRegions: string[],
   ) => void;
+  /**
+   * Will be called right before the region tip is going to be shown.
+   */
+  onRegionTipShow: (event: JQuery.Event, el: Element, code: string) => void;
+  /**
+   * Will be called on region mouse over event.
+   */
+  onRegionOver: (event: JQuery.Event, code: string) => void;
+  /**
+   * Will be called on region mouse out event.
+   */
+  onRegionOut: (event: JQuery.Event, code: string) => void;
+  /**
+   * Will be called right before the marker tip is going to be shown.
+   */
+  onMarkerTipShow: (event: JQuery.Event, el: Element, code: string) => void;
+  /**
+   * Will be called on marker mouse over event.
+   */
+  onMarkerOver: (event: JQuery.Event, code: string) => void;
+  /**
+   * Will be called on marker mouse out event.
+   */
+  onMarkerOut: (event: JQuery.Event, code: string) => void;
+  /**
+   * Will be called on marker click event.
+   */
+  onMarkerClick: (event: JQuery.Event, code: string) => void;
+  /**
+   * Will be called when marker is (de)selected. isSelected parameter of the callback indicates whether marker is selected or not. selectedMarkers contains codes of all currently selected markers.
+   */
+  onMarkerSelected?: (
+    event: JQuery.Event,
+    code: string,
+    isSelected: boolean,
+    selectedMarkers: string[],
+  ) => void;
+  /**
+   * Triggered when the map's viewport is changed (map was panned or zoomed).
+   */
+  onViewportChange: (event: JQuery.Event, scale: number) => void;
   /**
    * Set initially selected regions.
    * examples: ["US-CA"] | { "US-CA": true } | "US-CA"
