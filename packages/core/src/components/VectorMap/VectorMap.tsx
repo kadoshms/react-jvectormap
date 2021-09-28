@@ -18,25 +18,27 @@ export const VectorMap: FC<IVectorMapProps> = ({
   ...props
 }) => {
   const containerRef = useRef<JQuery | null>(null);
-  console.log(props.markers);
   useLayoutEffect(() => {
+    const mapContainer = containerRef.current;
     const { name, content } = map;
     $.fn.vectorMap("addMap", name, content);
-    if (containerRef.current) {
-      $(containerRef.current).vectorMap({
+    if (mapContainer) {
+      $(mapContainer).vectorMap({
         map: name,
         ...props,
       });
       if (mapRef) {
         (mapRef as MutableRefObject<JQuery>).current = $(
-          containerRef.current,
+          mapContainer,
         ).vectorMap("get", "mapObject");
       }
     }
 
     return () => {
-      if (mapRef) {
-        (mapRef as MutableRefObject<JQuery>).current.remove();
+      (mapRef as MutableRefObject<JQuery>)?.current.remove();
+      if (mapContainer) {
+        const mapObject = $(mapContainer).vectorMap("get", "mapObject");
+        mapObject.remove();
       }
     };
   }, [map, mapRef, props]);

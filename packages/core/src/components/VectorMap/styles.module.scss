@@ -11,6 +11,8 @@
 }
 
 .root {
+  height: 100%;
+  width: 100%;
   :global(svg) {
     touch-action: none;
   }
