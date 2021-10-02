@@ -1,3 +1,4 @@
 .DS_Store
 jquery.jvectormap.min.js
 .idea
+node_modules
