@@ -34,5 +34,5 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ["packages/*/**/webpack.config.js"],
+  ignorePatterns: ["packages/*/**/webpack.config.js", "packages/jvectormap", "packages/jquery-mousewheel"],
 };

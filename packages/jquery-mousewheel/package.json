@@ -35,7 +35,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run lint && npm run minify",
+    "build": "yarn run lint && yarn run minify",
     "minify": "uglifyjs -m -c --comments /Copyright/ -o jquery.mousewheel.min.js -- jquery.mousewheel.js",
     "lint": "eslint jquery.mousewheel.js",
     "karma": "karma start test/karma.conf.js",

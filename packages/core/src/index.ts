@@ -1,6 +1,5 @@
-// @ts-ignore
-import loadJVectorMap from "jvectormap-next";
-import * as $ from "jquery";
+import { loadJVectorMap } from "@react-jvectormap/lib";
+import $ from "jquery";
 export * from "./components";
 
 loadJVectorMap($);
