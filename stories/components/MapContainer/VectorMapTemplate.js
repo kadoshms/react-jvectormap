@@ -1,7 +1,8 @@
 import { MapContainer } from "./MapContainer";
 import React from "react";
+import { VectorMap } from "@react-jvectormap/core";
 
-const Template = (args) => (
+export const VectorMapTemplate = (args) => (
   <MapContainer>
     <VectorMap {...args} />
   </MapContainer>

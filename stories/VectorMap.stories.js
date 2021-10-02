@@ -1,12 +1,8 @@
-import React from "react";
 import { VectorMap } from "@react-jvectormap/core";
-import * as maps from "@react-jvectormap/maps";
-import { MapContainer } from "./components/MapContainer/MapContainer";
-import { gdpData } from "./data/gdpData";
-import { USAUnemploymentData } from "./data/USAUnemploymentData";
 
 import { default as GDPByCountryVisualizationArgs } from "./VectorMapExamples/GDPByCountryVisualization";
 import { default as MarkersOnTheWorldMapArgs } from "./VectorMapExamples/MarkersOnTheWorldMap";
+import { default as USAUnemploymentArgs } from "./VectorMapExamples/USAUnEmployment";
 import { VectorMapTemplate } from "./components/MapContainer/VectorMapTemplate";
 
 export default {
@@ -16,22 +12,13 @@ export default {
 };
 
 export const GDPByCountryVisualization = VectorMapTemplate.bind({});
+GDPByCountryVisualization.args = GDPByCountryVisualizationArgs;
 
-GDPByCountryVisualization.args = {
-  map: maps.worldMill,
-  onRegionTipShow: (e, el, code) => {
-    el.html(el.html() + " (GDP - " + gdpData[code] + ")");
-  },
-  series: {
-    regions: [
-      {
-        values: gdpData,
-        scale: ["#C8EEFF", "#0071A4"],
-        normalizeFunction: "polynomial",
-      },
-    ],
-  },
-};
+export const MarkersOnTheWorldMap = VectorMapTemplate.bind({});
+MarkersOnTheWorldMap.args = MarkersOnTheWorldMapArgs;
+
+export const USAUnemployment = VectorMapTemplate.bind({});
+USAUnemployment.args = USAUnemploymentArgs;
 
 // const val = 2009;
 // const statesValues = jvm.values.apply(
