@@ -6,7 +6,7 @@ import React, {
   useRef,
 } from "react";
 import $ from "jquery";
-import { IVectorMapProps } from "./types";
+import { IVectorMapProps } from "../../types";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 import { throwError } from "../../utils";

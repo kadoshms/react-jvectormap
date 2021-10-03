@@ -1,5 +1,6 @@
 import { Ref, CSSProperties } from "react";
-import * as events from "events";
+
+export type Nullable<T> = null | T;
 
 export interface IVectorMapProps {
   /**
@@ -169,7 +170,7 @@ interface IProjection {
   centralMeridian: number;
 }
 
-interface IVectorMap {
+export interface IVectorMap {
   name: string;
   content: {
     insets: IInset[];
@@ -204,8 +205,9 @@ interface IImageElementStyleAttributes {
 
 type PathsDefinition = { [key: string]: { path: string; name: string } };
 
-interface ISeries {
-  regions: IRegion[];
+export interface ISeries {
+  regions?: IRegion[];
+  markers?: Marker[];
 }
 
 type Scale = { [key: string]: string } | string[];
@@ -216,16 +218,24 @@ type Attribute = "fill" | "stroke" | "fill-opacity" | "stroke-opacity";
 
 type NormalizeFunctionType = "linear" | "polynomial";
 
-interface IRegion {
+export interface IRegion {
   scale: Scale;
   values: Values;
   attribute: Attribute;
   normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
 }
 
-type Marker = {
+interface IMarkerBase {
   name: string;
-  latLng?: [number, number];
-  coords?: [number, number];
-  style: CSSProperties;
-};
+  style?: CSSProperties;
+}
+
+interface IMarkerWithCoords extends IMarkerBase {
+  coords: [number, number];
+}
+
+interface IMarkerWithLatLng extends IMarkerBase {
+  latLng: [number, number];
+}
+
+export type Marker = IMarkerWithCoords | IMarkerWithLatLng;
