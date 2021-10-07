@@ -7,45 +7,45 @@ export class MarkerBuilder {
   private latLng?: [number, number];
   private style?: CSSProperties;
 
-  constructor(name: string) {
-    this.name = name;
+  constructor(value: string) {
+    this.name = value;
   }
 
   /**
    *
-   * @param name
+   * @param value
    */
-  public setName(name: string) {
-    this.name = name;
+  public setName(value: string) {
+    this.name = value;
     return this;
   }
 
   /**
    *
-   * @param coords
+   * @param value
    */
-  public setCoords(coords: [number, number]) {
+  public setCoords(value: [number, number]) {
     this.latLng = undefined;
-    this.coords = coords;
+    this.coords = value;
     return this;
   }
 
   /**
    *
-   * @param latLng
+   * @param value
    */
-  public setLatLng(latLng: [number, number]) {
+  public setLatLng(value: [number, number]) {
     this.coords = undefined;
-    this.latLng = latLng;
+    this.latLng = value;
     return this;
   }
 
   /**
    *
-   * @param style
+   * @param value
    */
-  public setStyle(style: CSSProperties) {
-    this.style = style;
+  public setStyle(value: CSSProperties) {
+    this.style = value;
     return this;
   }
 

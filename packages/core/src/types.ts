@@ -10,7 +10,7 @@ export interface IVectorMapProps {
   /**
    * Optional ref for accessing map methods
    */
-  mapRef: Ref<JQuery | null>;
+  mapRef?: Ref<JQuery | null>;
   /**
    * Container class Name
    */
@@ -82,7 +82,7 @@ export interface IVectorMapProps {
   /**
    * Set initially selected markers.
    */
-  selectedMarkers: string[] | { [region: string]: boolean } | string;
+  selectedMarkers?: string[] | { [region: string]: boolean } | string;
   /**
    * Set the styles for the map's markers. Any parameter suitable for regionStyle could be used as well as numeric parameter r to set the marker's radius.
    */
@@ -103,31 +103,31 @@ export interface IVectorMapProps {
   /**
    * Will be called right before the region tip is going to be shown.
    */
-  onRegionTipShow: (event: JQuery.Event, el: Element, code: string) => void;
+  onRegionTipShow?: OnRegionTipShow;
   /**
    * Will be called on region mouse over event.
    */
-  onRegionOver: (event: JQuery.Event, code: string) => void;
+  onRegionOver?: (event: JQuery.Event, code: string) => void;
   /**
    * Will be called on region mouse out event.
    */
-  onRegionOut: (event: JQuery.Event, code: string) => void;
+  onRegionOut?: (event: JQuery.Event, code: string) => void;
   /**
    * Will be called right before the marker tip is going to be shown.
    */
-  onMarkerTipShow: (event: JQuery.Event, el: Element, code: string) => void;
+  onMarkerTipShow?: (event: JQuery.Event, el: Element, code: string) => void;
   /**
    * Will be called on marker mouse over event.
    */
-  onMarkerOver: (event: JQuery.Event, code: string) => void;
+  onMarkerOver?: (event: JQuery.Event, code: string) => void;
   /**
    * Will be called on marker mouse out event.
    */
-  onMarkerOut: (event: JQuery.Event, code: string) => void;
+  onMarkerOut?: (event: JQuery.Event, code: string) => void;
   /**
    * Will be called on marker click event.
    */
-  onMarkerClick: (event: JQuery.Event, code: string) => void;
+  onMarkerClick?: (event: JQuery.Event, code: string) => void;
   /**
    * Will be called when marker is (de)selected. isSelected parameter of the callback indicates whether marker is selected or not. selectedMarkers contains codes of all currently selected markers.
    */
@@ -140,7 +140,7 @@ export interface IVectorMapProps {
   /**
    * Triggered when the map's viewport is changed (map was panned or zoomed).
    */
-  onViewportChange: (event: JQuery.Event, scale: number) => void;
+  onViewportChange?: (event: JQuery.Event, scale: number) => void;
   /**
    * Set initially selected regions.
    * examples: ["US-CA"] | { "US-CA": true } | "US-CA"
@@ -191,7 +191,7 @@ interface IFocus {
   animate?: boolean;
 }
 
-interface ISVGElementStyleAttributes {
+export interface ISVGElementStyleAttributes {
   initial?: CSSProperties;
   hover?: CSSProperties;
   selected?: CSSProperties;
@@ -205,9 +205,15 @@ interface IImageElementStyleAttributes {
 
 type PathsDefinition = { [key: string]: { path: string; name: string } };
 
+export interface IAttributeSeries {
+  attribute: string;
+  values: number[];
+  scale: number[];
+}
+
 export interface ISeries {
-  regions?: IRegion[];
-  markers?: Marker[];
+  regions?: IAttributeSeries[];
+  markers?: IAttributeSeries[];
 }
 
 type Scale = { [key: string]: string } | string[];
@@ -239,3 +245,9 @@ interface IMarkerWithLatLng extends IMarkerBase {
 }
 
 export type Marker = IMarkerWithCoords | IMarkerWithLatLng;
+
+export type OnRegionTipShow = (
+  event: JQuery.Event,
+  el: Element,
+  code: string,
+) => void;

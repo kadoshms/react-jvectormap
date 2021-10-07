@@ -9,7 +9,6 @@ import $ from "jquery";
 import { IVectorMapProps } from "../../types";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
-import { throwError } from "../../utils";
 
 export const VectorMap: FC<IVectorMapProps> = ({
   map,
@@ -22,7 +21,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
   useLayoutEffect(() => {
     const mapContainer = containerRef.current;
     if (!map) {
-      throwError("no map was loaded!");
+      console.error("[react-jvectormap]: no map was loaded!");
     }
     const { name, content } = map;
     $.fn.vectorMap("addMap", name, content);
