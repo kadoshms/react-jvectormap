@@ -205,29 +205,28 @@ interface IImageElementStyleAttributes {
 
 type PathsDefinition = { [key: string]: { path: string; name: string } };
 
-export interface IAttributeSeries {
-  attribute: string;
-  values: number[];
-  scale: number[];
-}
-
 export interface ISeries {
   regions?: IAttributeSeries[];
   markers?: IAttributeSeries[];
 }
 
-type Scale = { [key: string]: string } | string[];
+type Scale = { [key: string]: string } | number[];
 
 type Values = { [key: string]: string | number };
 
-type Attribute = "fill" | "stroke" | "fill-opacity" | "stroke-opacity";
+export type NormalizeFunctionType = "linear" | "polynomial";
 
-type NormalizeFunctionType = "linear" | "polynomial";
+export interface IAttributeSeries {
+  attribute: string;
+  values: number[];
+  scale: Scale;
+  normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
+}
 
 export interface IRegion {
   scale: Scale;
   values: Values;
-  attribute: Attribute;
+  attribute: string;
   normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
 }
 

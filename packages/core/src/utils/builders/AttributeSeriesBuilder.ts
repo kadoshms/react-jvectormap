@@ -1,14 +1,21 @@
-import { IAttributeSeries } from "../../types";
+import { IAttributeSeries, NormalizeFunctionType } from "../../types";
 
 export class AttributeSeriesBuilder {
   private attribute: string;
   private scale: number[];
   private values: number[];
+  private normalizeFunction?: NormalizeFunctionType;
 
-  constructor(attribute: string, scale: number[], values: number[]) {
+  constructor(
+    attribute: string,
+    scale: number[],
+    values: number[],
+    normalizeFunction?: NormalizeFunctionType,
+  ) {
     this.attribute = attribute;
     this.scale = scale;
     this.values = values;
+    this.normalizeFunction = normalizeFunction;
   }
 
   /**
@@ -38,11 +45,21 @@ export class AttributeSeriesBuilder {
     return this;
   }
 
+  /**
+   *
+   * @param value
+   */
+  public setNormalizeFunction(value: NormalizeFunctionType) {
+    this.normalizeFunction = value;
+    return this;
+  }
+
   public build(): IAttributeSeries {
     return {
       scale: this.scale,
       values: this.values,
       attribute: this.attribute,
+      normalizeFunction: this.normalizeFunction,
     };
   }
 }
