@@ -4,6 +4,7 @@ import { default as GDPByCountryVisualizationArgs } from "./VectorMapExamples/GD
 import { default as MarkersOnTheWorldMapArgs } from "./VectorMapExamples/MarkersOnTheWorldMap";
 import { default as USAUnemploymentArgs } from "./VectorMapExamples/USAUnEmployment";
 import { default as RegionsSelectionArgs } from "./VectorMapExamples/RegionsSelection";
+import { default as FranceElectionsArgs } from "./VectorMapExamples/FranceElections";
 
 import { VectorMapTemplate } from "./components/MapContainer/VectorMapTemplate";
 
@@ -24,3 +25,6 @@ USAUnemployment.args = USAUnemploymentArgs;
 
 export const RegionSelection = VectorMapTemplate.bind({});
 RegionSelection.args = RegionsSelectionArgs;
+
+export const FranceElections = VectorMapTemplate.bind({});
+FranceElections.args = FranceElectionsArgs;
