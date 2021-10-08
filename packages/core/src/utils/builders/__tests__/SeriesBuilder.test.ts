@@ -12,8 +12,8 @@ jest.mock("../MarkerBuilder", () => ({
 }));
 describe("AttributeSeriesBuilder", () => {
   it("should add two marker series", () => {
-    const ms1 = new AttributeSeriesBuilder("r", [10, 20], [1, 2, 3]).build();
-    const ms2 = new AttributeSeriesBuilder("r", [10, 20], [1, 2, 3]).build();
+    const ms1 = new AttributeSeriesBuilder("r").build();
+    const ms2 = new AttributeSeriesBuilder("r").build();
     const series = new SeriesBuilder().addMarkersSeries(ms1, ms2).build();
     expect(series).toEqual({
       markers: [
@@ -24,8 +24,8 @@ describe("AttributeSeriesBuilder", () => {
   });
 
   it("should add two region series", () => {
-    const rs1 = new AttributeSeriesBuilder("r", [10, 20], [1, 2, 3]).build();
-    const rs2 = new AttributeSeriesBuilder("r", [10, 20], [1, 2, 3]).build();
+    const rs1 = new AttributeSeriesBuilder("r").build();
+    const rs2 = new AttributeSeriesBuilder("r").build();
     const series = new SeriesBuilder().addRegionsSeries(rs1, rs2).build();
     expect(series).toEqual({
       regions: [

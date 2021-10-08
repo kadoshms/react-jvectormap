@@ -218,8 +218,8 @@ export type NormalizeFunctionType = "linear" | "polynomial";
 
 export interface IAttributeSeries {
   attribute: string;
-  values: number[];
-  scale: Scale;
+  values?: number[];
+  scale?: Scale;
   normalizeFunction?: NormalizeFunctionType | ((value?: number) => string);
 }
 

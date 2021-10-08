@@ -2,20 +2,12 @@ import { IAttributeSeries, NormalizeFunctionType } from "../../types";
 
 export class AttributeSeriesBuilder {
   private attribute: string;
-  private scale: number[];
-  private values: number[];
+  private scale?: number[];
+  private values?: number[];
   private normalizeFunction?: NormalizeFunctionType;
 
-  constructor(
-    attribute: string,
-    scale: number[],
-    values: number[],
-    normalizeFunction?: NormalizeFunctionType,
-  ) {
+  constructor(attribute: string) {
     this.attribute = attribute;
-    this.scale = scale;
-    this.values = values;
-    this.normalizeFunction = normalizeFunction;
   }
 
   /**
