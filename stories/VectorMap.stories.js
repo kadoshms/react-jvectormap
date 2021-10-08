@@ -5,6 +5,13 @@ import { default as MarkersOnTheWorldMapArgs } from "./VectorMapExamples/Markers
 import { default as USAUnemploymentArgs } from "./VectorMapExamples/USAUnEmployment";
 import { default as RegionsSelectionArgs } from "./VectorMapExamples/RegionsSelection";
 import { default as FranceElectionsArgs } from "./VectorMapExamples/FranceElections";
+import { default as RegionLabelsArgs } from "./VectorMapExamples/RegionLabels";
+import { default as MallMapArgs } from "./VectorMapExamples/MallMap";
+import {
+  default as ReverseProjectionArgs,
+  ReverseProjectionTemplate,
+} from "./VectorMapExamples/ReverseProjection";
+
 import {
   default as RandomColorsArgs,
   RandomColorsTemplate,
@@ -35,3 +42,12 @@ FranceElections.args = FranceElectionsArgs;
 
 export const RandomColors = RandomColorsTemplate.bind({});
 RandomColors.args = RandomColorsArgs;
+
+export const MallMap = VectorMapTemplate.bind({});
+MallMap.args = MallMapArgs;
+
+export const ReverseProjection = ReverseProjectionTemplate.bind({});
+ReverseProjection.args = ReverseProjectionArgs;
+
+export const RegionLabels = VectorMapTemplate.bind({});
+RegionLabels.args = RegionLabelsArgs;
