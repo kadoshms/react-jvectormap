@@ -5,6 +5,10 @@ import { default as MarkersOnTheWorldMapArgs } from "./VectorMapExamples/Markers
 import { default as USAUnemploymentArgs } from "./VectorMapExamples/USAUnEmployment";
 import { default as RegionsSelectionArgs } from "./VectorMapExamples/RegionsSelection";
 import { default as FranceElectionsArgs } from "./VectorMapExamples/FranceElections";
+import {
+  default as RandomColorsArgs,
+  RandomColorsTemplate,
+} from "./VectorMapExamples/RandomColors";
 
 import { VectorMapTemplate } from "./components/MapContainer/VectorMapTemplate";
 
@@ -28,3 +32,6 @@ RegionSelection.args = RegionsSelectionArgs;
 
 export const FranceElections = VectorMapTemplate.bind({});
 FranceElections.args = FranceElectionsArgs;
+
+export const RandomColors = RandomColorsTemplate.bind({});
+RandomColors.args = RandomColorsArgs;

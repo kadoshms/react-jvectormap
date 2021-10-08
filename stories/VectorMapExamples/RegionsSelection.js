@@ -32,11 +32,10 @@ const regionStyle = new StyleBuilder()
   .setSelected({ fill: "#F4A582" })
   .build();
 
-const markersSeries = new AttributeSeriesBuilder(
-  "r",
-  [5, 15],
-  cityAreaData,
-).build();
+const markersSeries = new AttributeSeriesBuilder("r")
+  .setScale([5, 15])
+  .setValues(cityAreaData)
+  .build();
 const series = new SeriesBuilder().addMarkersSeries(markersSeries).build();
 
 const map = new VectorMapBuilder(deMerc)
