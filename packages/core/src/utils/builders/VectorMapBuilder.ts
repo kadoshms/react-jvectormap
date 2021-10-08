@@ -1,4 +1,5 @@
 import {
+  ILabels,
   ISeries,
   ISVGElementStyleAttributes,
   IVectorMap,
@@ -19,6 +20,7 @@ export class VectorMapBuilder {
   private markersSelectable?: boolean;
   private onRegionTipShow?: OnRegionTipShow;
   private series?: ISeries;
+  private labels?: ILabels;
 
   public constructor(map: IVectorMap) {
     this.map = map;
@@ -140,6 +142,15 @@ export class VectorMapBuilder {
 
   /**
    *
+   * @param values
+   */
+  public setLabels(values: ILabels) {
+    this.labels = values;
+    return this;
+  }
+
+  /**
+   *
    */
   public build(): IVectorMapProps {
     return {
@@ -153,6 +164,7 @@ export class VectorMapBuilder {
       markersSelectable: this.markersSelectable,
       regionsSelectable: this.regionsSelectable,
       markers: this.markers,
+      labels: this.labels,
     };
   }
 }

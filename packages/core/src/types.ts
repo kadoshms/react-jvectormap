@@ -150,6 +150,10 @@ export interface IVectorMapProps {
    * Object with two keys: markers and regions. Each of which is an array of series configs to be applied to the respective map elements.
    */
   series?: ISeries;
+  /**
+   * Object with two keys: markers and regions. Each of which is an array of labels configs to be applied to the respective map elements.
+   */
+  labels?: ILabels;
 }
 
 interface IBBox {
@@ -241,6 +245,20 @@ interface IMarkerWithCoords extends IMarkerBase {
 
 interface IMarkerWithLatLng extends IMarkerBase {
   latLng: [number, number];
+}
+
+export type RenderLabel = (code: string) => void | string;
+
+export type GetOffsets = (code: string) => { [key: string | number]: number[] };
+
+export interface ILabelsProps {
+  render: RenderLabel;
+  offsets: GetOffsets;
+}
+
+export interface ILabels {
+  regions?: ILabelsProps;
+  markers?: ILabelsProps;
 }
 
 export type Marker = IMarkerWithCoords | IMarkerWithLatLng;
