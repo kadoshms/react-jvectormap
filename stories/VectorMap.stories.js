@@ -7,6 +7,9 @@ import { default as RegionsSelectionArgs } from "./VectorMapExamples/RegionsSele
 import { default as FranceElectionsArgs } from "./VectorMapExamples/FranceElections";
 import { default as RegionLabelsArgs } from "./VectorMapExamples/RegionLabels";
 import { default as MallMapArgs } from "./VectorMapExamples/MallMap";
+import { default as MarkerIconsArgs } from "./VectorMapExamples/MarkerIcons";
+import { default as MapLegendsArgs } from "./VectorMapExamples/MapLegends";
+
 import {
   default as ReverseProjectionArgs,
   ReverseProjectionTemplate,
@@ -51,3 +54,9 @@ ReverseProjection.args = ReverseProjectionArgs;
 
 export const RegionLabels = VectorMapTemplate.bind({});
 RegionLabels.args = RegionLabelsArgs;
+
+export const MapLegends = VectorMapTemplate.bind({});
+MapLegends.args = MapLegendsArgs;
+
+export const MarkerIcons = VectorMapTemplate.bind({});
+MarkerIcons.args = MarkerIconsArgs;
