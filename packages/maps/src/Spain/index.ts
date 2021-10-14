@@ -1,3 +1,3 @@
-import useMill from "./Miller.json";
+import esMill from "./Miller.json";
 
-export { useMill };
+export { esMill };
