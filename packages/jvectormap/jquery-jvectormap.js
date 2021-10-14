@@ -38,6 +38,12 @@ export const loadJVectorMap = ($) =>
       },
     };
 
+    $.fn.multiMap = function (options) {
+      options.container = this;
+      new jvm.MultiMap(options);
+      return this;
+    };
+
     $.fn.vectorMap = function (options) {
       let map, methodName;
       map = this.children(".jvectormap-container").data("mapObject");
