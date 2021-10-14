@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "pre-commit": "lint-staged",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./stories/static -p 6006",
     "build-storybook": "build-storybook"
   },
   "workspaces": [

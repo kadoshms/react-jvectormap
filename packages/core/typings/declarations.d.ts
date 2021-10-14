@@ -7,6 +7,7 @@ declare global {
   }
   interface JQuery {
     vectorMap(...args: unknown[]): JQuery;
+    multiMap(...args: unknown[]): JQuery;
   }
 }
 

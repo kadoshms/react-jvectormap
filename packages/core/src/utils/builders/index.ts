@@ -5,3 +5,4 @@ export { AttributeSeriesBuilder } from "./AttributeSeriesBuilder";
 export { SeriesBuilder } from "./SeriesBuilder";
 export { LabelsBuilder } from "./LabelsBuilder";
 export { LabelsPropsBuilder } from "./LabelsPropsBuilder";
+export { MultiMapBuilder } from "./MultiMapBuilder";

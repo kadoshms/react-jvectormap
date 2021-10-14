@@ -2,11 +2,7 @@ import { Ref, CSSProperties } from "react";
 
 export type Nullable<T> = null | T;
 
-export interface IVectorMapProps {
-  /**
-   * Map content definition
-   */
-  map: IVectorMap;
+interface IMapComponent {
   /**
    * Optional ref for accessing map methods
    */
@@ -19,6 +15,13 @@ export interface IVectorMapProps {
    * Container inline CSS-in-JS style
    */
   style?: CSSProperties;
+}
+
+export interface IVectorMapProps extends IMapComponent {
+  /**
+   * Map content definition
+   */
+  map: IVectorMap;
   /**
    * Background color of the map in CSS format.
    */
@@ -154,6 +157,34 @@ export interface IVectorMapProps {
    * Object with two keys: markers and regions. Each of which is an array of labels configs to be applied to the respective map elements.
    */
   labels?: ILabels;
+}
+
+export interface IMainMap {
+  map: IVectorMap;
+}
+
+export interface IMultiMapProps extends IMapComponent {
+  /**
+   * Maximum number of levels user can go through
+   */
+  maxLevel: number;
+  /**
+   * Config of the main map.
+   */
+  main: IMainMap;
+  /**
+   * Function to generate map name by region code. Default value is:
+   */
+  mapNameByCode?: (code: string) => string;
+  /**
+   * Function to generate map url by region code. Default value is:
+   */
+  mapUrlByCode?: (code: string) => string;
+  /**
+   * Function to manually retrieve map data
+   * @param code
+   */
+  getDrillDownMap?: (code: string) => Promise<IVectorMap> | IVectorMap;
 }
 
 interface IBBox {
