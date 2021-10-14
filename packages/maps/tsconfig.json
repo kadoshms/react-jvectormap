@@ -5,6 +5,8 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }

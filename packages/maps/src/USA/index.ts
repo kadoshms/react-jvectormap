@@ -1,3 +1,5 @@
-export { default as usMill } from "./Miller";
-export { default as usAea } from "./Albers";
-export { default as usLCC } from "./Lambert";
+import usMill from "./Miller.json";
+import usAea from "./Albers.json";
+import usLCC from "./Lambert.json";
+
+export { usMill, usAea, usLCC };

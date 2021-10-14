@@ -1,1 +1,3 @@
-export { default as deMerc } from "./Mercator";
+import deMerc from "./Mercator.json";
+
+export { deMerc };

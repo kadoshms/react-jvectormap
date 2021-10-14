@@ -1,1 +1,3 @@
-export { default as esMill } from "./Miller";
+import useMill from "./Miller.json";
+
+export { useMill };

@@ -1,2 +1,4 @@
-export { default as frRegionsMerc } from "./RegionsMeractor";
-export { default as frRegionsMill } from "./RegionsMill";
+import frRegionsMerc from "./RegionsMeractor.json";
+import frRegionsMill from "./RegionsMill.json";
+
+export { frRegionsMerc, frRegionsMill };
