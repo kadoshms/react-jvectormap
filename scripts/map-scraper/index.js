@@ -1,82 +1,55 @@
-// const { program } = require("commander");
+const { program } = require("commander");
+const fs = require("fs");
 const { execSync } = require("child_process");
-//
-// program
-//   .option("-n --name <name>", "map name")
-//   .option("-p --projection <projection>", "map projection")
-//   .option("-l --lang <lang>", "map language")
-//   .option("-f --folder <folder>", "folder path")
-//   .parse(process.argv);
-//
-// const { name, projection, lang, folder } = program.opts();
-//
-// if (!name || !projection) {
-//   console.error("Missing name or projection");
-//   process.exit(1);
-// }
-//
-// const mapFileName = [name, projection, lang]
-//   .filter((x) => x)
-//   .join("-")
-//   .concat(".js");
-//
-// execSync(`wget https://jvectormap.com/js/${folder ? `${folder}/` : ''}jquery-jvectormap-${mapFileName} --no-check-certificate -P output`);
-const states = [
-  "us-va",
-  "us-pa",
-  "us-tn",
-  "us-wv",
-  "us-nv",
-  "us-tx",
-  "us-nh",
-  "us-ny",
-  "us-hi",
-  "us-vt",
-  "us-nm",
-  "us-nc",
-  "us-nd",
-  "us-ne",
-  "us-la",
-  "us-sd",
-  "us-dc",
-  "us-de",
-  "us-fl",
-  "us-ct",
-  "us-wa",
-  "us-ks",
-  "us-wi",
-  "us-or",
-  "us-ky",
-  "us-me",
-  "us-oh",
-  "us-ok",
-  "us-id",
-  "us-wy",
-  "us-ut",
-  "us-in",
-  "us-il",
-  "us-ak",
-  "us-nj",
-  "us-co",
-  "us-md",
-  "us-ma",
-  "us-al",
-  "us-mo",
-  "us-mn",
-  "us-ca",
-  "us-ia",
-  "us-mi",
-  "us-ga",
-  "us-az",
-  "us-mt",
-  "us-ms",
-  "us-sc",
-  "us-ri",
-  "us-ar",
-];
 
-states.forEach(st => {
-  const folder = 'us-counties';
-  const mapFileName = `data-${st}-lcc-en.js`;
-  execSync(`wget https://jvectormap.com/js/${folder ? `${folder}/` : ''}jquery-jvectormap-${mapFileName} --no-check-certificate -P output`);
-})
+program.option("-e --entity <entity>", "entity name").parse(process.argv);
+
+const { entity } = program.opts();
+
+const projections = ["mill", "merc", "aea", "lcc"];
+
+const toCamelCase = (str) =>
+  str.replace(/_([a-z])/g, function (m, w) {
+    return w.toUpperCase();
+  });
+
+const jQuery = {
+  fn: {
+    vectorMap: (action, name, content) => {
+      const mapName = toCamelCase(name);
+      const chunks = name.split("_");
+      const camelCase = toCamelCase(
+        chunks.slice(0, chunks.length - 1).join("_"),
+      );
+      const entityName = camelCase
+        .charAt(0)
+        .toUpperCase()
+        .concat(camelCase.slice(1));
+      const folderPath = `../../packages/maps/src/${entityName}`;
+      !fs.existsSync(folderPath) &&
+        fs.mkdirSync(folderPath, { recursive: true });
+      fs.writeFileSync(
+        `${folderPath}/${mapName}.json`,
+        JSON.stringify({
+          name,
+          content,
+        }),
+      );
+
+      fs.rmSync(`temp.js`);
+    },
+  },
+};
+
+projections.forEach((projection) => {
+  try {
+    execSync(
+      `wget https://jvectormap.com/js/jquery-jvectormap-${entity}-${projection}.js --no-check-certificate -O temp.js`,
+    );
+
+    const file = fs.readFileSync("temp.js", "utf8");
+    eval(file);
+  } catch (err) {
+      console.log('Could not download map');
+  }
+});
