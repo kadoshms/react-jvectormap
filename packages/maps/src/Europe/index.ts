@@ -1,3 +1,4 @@
+import europeMerc from "./europeMerc.json";
 import europeMill from "./europeMill.json";
 
-export { europeMill };
+export { europeMerc, europeMill };

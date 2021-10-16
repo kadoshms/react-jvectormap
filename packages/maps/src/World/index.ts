@@ -1,1 +1,4 @@
-export { default as worldMill } from "./Miller";
+import worldMerc from "./worldMerc.json";
+import worldMill from "./worldMill.json";
+
+export { worldMerc, worldMill };

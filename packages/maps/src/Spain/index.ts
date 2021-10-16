@@ -1,3 +1,4 @@
-import esMill from "./Miller.json";
+import esMerc from "./esMerc.json";
+import esMill from "./esMill.json";
 
-export { esMill };
+export { esMerc, esMill };
