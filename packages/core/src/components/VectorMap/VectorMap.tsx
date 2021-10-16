@@ -39,8 +39,8 @@ export const VectorMap: FC<IVectorMapProps> = ({
     return () => {
       (mapRef as MutableRefObject<JQuery>)?.current.remove();
       if (mapContainer) {
-        const mapObject = $(mapContainer).vectorMap("get", "mapObject");
-        mapObject.remove();
+        const mapObject = $(mapContainer).vectorMap("remove");
+        // mapObject.remove();
       }
     };
   }, [map, mapRef, props]);

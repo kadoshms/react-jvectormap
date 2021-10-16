@@ -47,7 +47,9 @@ export const loadJVectorMap = ($) =>
     $.fn.vectorMap = function (options) {
       let map, methodName;
       map = this.children(".jvectormap-container").data("mapObject");
-      if (options === "addMap") {
+      if (options === "remove") {
+        this.remove();
+      } else if (options === "addMap") {
         jvm.Map.maps[arguments[1]] = arguments[2];
       } else if (
         (options === "set" || options === "get") &&
@@ -55,6 +57,7 @@ export const loadJVectorMap = ($) =>
       ) {
         methodName =
           arguments[1].charAt(0).toUpperCase() + arguments[1].substr(1);
+        console.log("mmmm", map);
         return map[options + methodName].apply(
           map,
           Array.prototype.slice.call(arguments, 2),
