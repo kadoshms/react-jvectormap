@@ -1,5 +1,7 @@
 # React jvectormap
 
+![Logo](logo.png)
+
 ## About
 
 A simple wrapper for [jvectormap](http://jvectormap.com/)
