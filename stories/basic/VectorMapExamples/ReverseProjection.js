@@ -1,5 +1,5 @@
 import { usLcc } from "@react-jvectormap/maps";
-import { MapContainer } from "../components/MapContainer/MapContainer";
+import { MapContainer } from "../../components/MapContainer/MapContainer";
 import React, { useLayoutEffect, useRef, useMemo } from "react";
 import { VectorMap } from "@react-jvectormap/core";
 let markerIndex = 0;

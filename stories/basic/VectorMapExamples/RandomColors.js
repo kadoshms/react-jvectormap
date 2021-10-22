@@ -4,7 +4,7 @@ import {
   SeriesBuilder,
   AttributeSeriesBuilder,
 } from "@react-jvectormap/core";
-import { MapContainer } from "../components/MapContainer/MapContainer";
+import { MapContainer } from "../../components/MapContainer/MapContainer";
 import React, { useLayoutEffect, useRef } from "react";
 import { VectorMap } from "@react-jvectormap/core";
 

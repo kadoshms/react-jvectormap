@@ -20,7 +20,7 @@ import {
   RandomColorsTemplate,
 } from "./VectorMapExamples/RandomColors";
 
-import { VectorMapTemplate } from "./components/MapContainer/VectorMapTemplate";
+import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
 
 export default {
   title: "core/VectorMap",

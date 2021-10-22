@@ -1,13 +1,13 @@
 import { MultiMap } from "@react-jvectormap/core";
 import { usLcc } from "@react-jvectormap/maps";
-import { MultiMapTemplate } from "./components/MapContainer/MultiMapTemplate";
+import { MultiMapTemplate } from "../components/MapContainer/MultiMapTemplate";
 
 export default {
   title: "core/MultiMap",
   component: MultiMap,
   argTypes: {},
 };
-//
+
 export const DrillDownUSMap = MultiMapTemplate.bind({});
 
 DrillDownUSMap.args = {
