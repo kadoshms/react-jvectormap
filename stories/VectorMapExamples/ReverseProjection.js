@@ -1,4 +1,4 @@
-import { usLCC } from "@react-jvectormap/maps";
+import { usLcc } from "@react-jvectormap/maps";
 import { MapContainer } from "../components/MapContainer/MapContainer";
 import React, { useLayoutEffect, useRef, useMemo } from "react";
 import { VectorMap } from "@react-jvectormap/core";
@@ -10,7 +10,7 @@ export const ReverseProjectionTemplate = () => {
 
   const props = useMemo(
     () => ({
-      map: usLCC,
+      map: usLcc,
       markerStyle: {
         initial: {
           fill: "red",
