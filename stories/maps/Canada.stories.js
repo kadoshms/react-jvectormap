@@ -1,6 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { caLcc, caMerc, caMill } from "@react-jvectormap/maps";
-import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
+import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
   title: "maps/Map/Canada",
@@ -8,17 +8,20 @@ export default {
   argTypes: {},
 };
 
-export const Miller = VectorMapTemplate.bind({});
+export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: caLcc,
+  fileName: "caLcc",
 };
 
-export const Mercator = VectorMapTemplate.bind({});
+export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: caMerc,
+  fileName: "caMerc",
 };
 
-export const Lambert = VectorMapTemplate.bind({});
+export const Lambert = MapTemplate.bind({});
 Lambert.args = {
   map: caMill,
+  fileName: "caMill",
 };

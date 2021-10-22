@@ -1,6 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { arMerc, arMill } from "@react-jvectormap/maps";
-import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
+import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
   title: "maps/Map/Argentina",
@@ -8,12 +8,14 @@ export default {
   argTypes: {},
 };
 
-export const Miller = VectorMapTemplate.bind({});
+export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: arMerc,
+  fileName: "arMerc",
 };
 
-export const Mercator = VectorMapTemplate.bind({});
+export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: arMill,
+  fileName: "arMill",
 };

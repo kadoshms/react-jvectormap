@@ -1,6 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { ruFdMerc, ruFdMill } from "@react-jvectormap/maps";
-import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
+import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
   title: "maps/Map/RussiaFederalDistricts",
@@ -8,12 +8,14 @@ export default {
   argTypes: {},
 };
 
-export const Miller = VectorMapTemplate.bind({});
+export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: ruFdMerc,
+  fileName: "ruFdMerc",
 };
 
-export const Mercator = VectorMapTemplate.bind({});
+export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: ruFdMill,
+  fileName: "ruFdMill",
 };

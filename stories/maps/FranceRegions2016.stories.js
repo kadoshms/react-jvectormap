@@ -1,6 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { frRegions_2016Merc, frRegions_2016Mill } from "@react-jvectormap/maps";
-import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
+import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
   title: "maps/Map/FranceRegions2016",
@@ -8,12 +8,14 @@ export default {
   argTypes: {},
 };
 
-export const Miller = VectorMapTemplate.bind({});
+export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: frRegions_2016Merc,
+  fileName: "frRegions_2016Merc",
 };
 
-export const Mercator = VectorMapTemplate.bind({});
+export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: frRegions_2016Mill,
+  fileName: "frRegions_2016Mill",
 };

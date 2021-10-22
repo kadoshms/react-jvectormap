@@ -1,6 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { usAea, usLcc, usMill, useMerc } from "@react-jvectormap/maps";
-import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
+import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
   title: "maps/Map/UnitedStates",
@@ -8,22 +8,26 @@ export default {
   argTypes: {},
 };
 
-export const Miller = VectorMapTemplate.bind({});
+export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: usAea,
+  fileName: "usAea",
 };
 
-export const Mercator = VectorMapTemplate.bind({});
+export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: usLcc,
+  fileName: "usLcc",
 };
 
-export const Albers = VectorMapTemplate.bind({});
+export const Albers = MapTemplate.bind({});
 Albers.args = {
   map: usMill,
+  fileName: "usMill",
 };
 
-export const Lambert = VectorMapTemplate.bind({});
+export const Lambert = MapTemplate.bind({});
 Lambert.args = {
   map: useMerc,
+  fileName: "useMerc",
 };
