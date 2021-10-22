@@ -1,8 +1,9 @@
 import { CSSProperties } from "react";
 import { ISVGElementStyleAttributes } from "../../types";
 import { stripUndefinedValues } from "./utils";
+import { IBuilder } from "./types";
 
-export class StyleBuilder {
+export class StyleBuilder implements IBuilder<ISVGElementStyleAttributes> {
   private initial?: CSSProperties;
   private selected?: CSSProperties;
   private hover?: CSSProperties;
@@ -44,7 +45,7 @@ export class StyleBuilder {
     return this;
   }
 
-  public build(): ISVGElementStyleAttributes {
+  public build() {
     return stripUndefinedValues({
       selected: this.selected,
       selectedHover: this.selectedHover,

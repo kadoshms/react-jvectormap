@@ -167,7 +167,7 @@ export interface IMultiMapProps extends IMapComponent {
   /**
    * Maximum number of levels user can go through
    */
-  maxLevel: number;
+  maxLevel?: number;
   /**
    * Config of the main map.
    */
@@ -271,11 +271,11 @@ interface IMarkerBase {
 }
 
 interface IMarkerWithCoords extends IMarkerBase {
-  coords: [number, number];
+  coords: number[];
 }
 
 interface IMarkerWithLatLng extends IMarkerBase {
-  latLng: [number, number];
+  latLng: number[];
 }
 
 export type RenderLabel = (code: string) => void | string;

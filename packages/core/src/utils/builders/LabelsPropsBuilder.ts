@@ -1,6 +1,7 @@
 import { GetOffsets, ILabelsProps, RenderLabel } from "../../types";
+import { IBuilder } from "./types";
 
-export class LabelsPropsBuilder {
+export class LabelsPropsBuilder implements IBuilder<ILabelsProps> {
   private render: RenderLabel;
   private offsets: GetOffsets;
 
@@ -9,17 +10,28 @@ export class LabelsPropsBuilder {
     this.offsets = offsets;
   }
 
+  /**
+   *
+   * @param render
+   */
   public setRender(render: RenderLabel) {
     this.render = render;
     return this;
   }
 
+  /**
+   *
+   * @param offsets
+   */
   public setOffsets(offsets: GetOffsets) {
     this.offsets = offsets;
     return this;
   }
 
-  public build(): ILabelsProps {
+  /**
+   *
+   */
+  public build() {
     return {
       render: this.render,
       offsets: this.offsets,

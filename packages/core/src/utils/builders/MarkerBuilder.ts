@@ -1,10 +1,11 @@
 import { CSSProperties } from "react";
 import { Marker } from "../../types";
+import { IBuilder } from "./types";
 
-export class MarkerBuilder {
+export class MarkerBuilder implements IBuilder<Marker> {
   private name: string;
-  private coords?: [number, number];
-  private latLng?: [number, number];
+  private coords?: number[];
+  private latLng?: number[];
   private style?: CSSProperties;
 
   constructor(value: string) {
@@ -24,7 +25,7 @@ export class MarkerBuilder {
    *
    * @param value
    */
-  public setCoords(value: [number, number]) {
+  public setCoords(value: number[]) {
     this.latLng = undefined;
     this.coords = value;
     return this;
@@ -34,7 +35,7 @@ export class MarkerBuilder {
    *
    * @param value
    */
-  public setLatLng(value: [number, number]) {
+  public setLatLng(value: number[]) {
     this.coords = undefined;
     this.latLng = value;
     return this;
@@ -52,7 +53,7 @@ export class MarkerBuilder {
   /**
    *
    */
-  public build(): Marker {
+  public build() {
     const commonProps = {
       name: this.name,
       style: this.style,

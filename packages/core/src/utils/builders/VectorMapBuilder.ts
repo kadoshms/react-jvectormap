@@ -7,8 +7,9 @@ import {
   Marker,
   OnRegionTipShow,
 } from "../../types";
+import { IBuilder } from "./types";
 
-export class VectorMapBuilder {
+export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
   private map: IVectorMap;
   private backgroundColor?: string;
   private zoomMin?: number;
@@ -152,7 +153,7 @@ export class VectorMapBuilder {
   /**
    *
    */
-  public build(): IVectorMapProps {
+  public build() {
     return {
       map: this.map,
       series: this.series,

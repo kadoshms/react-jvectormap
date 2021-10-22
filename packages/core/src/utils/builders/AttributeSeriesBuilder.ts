@@ -1,6 +1,7 @@
 import { IAttributeSeries, NormalizeFunctionType } from "../../types";
+import { IBuilder } from "./types";
 
-export class AttributeSeriesBuilder {
+export class AttributeSeriesBuilder implements IBuilder<IAttributeSeries> {
   private attribute: string;
   private scale?: number[];
   private values?: number[];
@@ -46,7 +47,7 @@ export class AttributeSeriesBuilder {
     return this;
   }
 
-  public build(): IAttributeSeries {
+  public build() {
     return {
       scale: this.scale,
       values: this.values,

@@ -1,7 +1,8 @@
-import { ILabelsProps, ISeries } from "../../types";
+import { ILabels, ILabelsProps } from "../../types";
 import { stripUndefinedValues } from "./utils";
+import { IBuilder } from "./types";
 
-export class LabelsBuilder {
+export class LabelsBuilder implements IBuilder<ILabels> {
   private markers?: ILabelsProps[];
   private regions?: ILabelsProps[];
 
@@ -29,7 +30,7 @@ export class LabelsBuilder {
     return this;
   }
 
-  public build(): ISeries {
+  public build() {
     return stripUndefinedValues({
       markers: this.markers,
       regions: this.regions,

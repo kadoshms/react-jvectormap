@@ -1,7 +1,8 @@
 import { IAttributeSeries, ISeries } from "../../types";
 import { stripUndefinedValues } from "./utils";
+import { IBuilder } from "./types";
 
-export class SeriesBuilder {
+export class SeriesBuilder implements IBuilder<ISeries> {
   private markers?: IAttributeSeries[];
   private regions?: IAttributeSeries[];
 
@@ -29,7 +30,7 @@ export class SeriesBuilder {
     return this;
   }
 
-  public build(): ISeries {
+  public build() {
     return stripUndefinedValues({
       markers: this.markers,
       regions: this.regions,
