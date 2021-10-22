@@ -57,7 +57,6 @@ export const loadJVectorMap = ($) =>
       ) {
         methodName =
           arguments[1].charAt(0).toUpperCase() + arguments[1].substr(1);
-        console.log("mmmm", map);
         return map[options + methodName].apply(
           map,
           Array.prototype.slice.call(arguments, 2),
