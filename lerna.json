@@ -5,6 +5,8 @@
   "npmClient": "yarn",
   "version": "independent",
   "command": {
-    "registry": "http://localhost:4873"
+    "publish": {
+      "registry": "http://localhost:4873"
+    }
   }
 }
