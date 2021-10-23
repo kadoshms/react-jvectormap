@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/jquery/jquery-mousewheel/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "jquery",
     "mouse",

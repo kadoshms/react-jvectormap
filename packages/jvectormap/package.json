@@ -9,6 +9,9 @@
   "scripts": {
     "build": "./build.sh"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@react-jvectormap/jquery-mousewheel": "^1.0.0"
   }
