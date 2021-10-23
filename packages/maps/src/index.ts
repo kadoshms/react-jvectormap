@@ -1,4 +1,5 @@
 export * from "./Africa";
+export * from "./Algeria";
 export * from "./Argentina";
 export * from "./Asia";
 export * from "./Australia";
