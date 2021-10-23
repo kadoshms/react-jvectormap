@@ -6,19 +6,4 @@
 
 A simple wrapper for [jvectormap](http://jvectormap.com/)
 
-Please feel free to contribute, open issues or just enjoy this library!
-
-## Gettings started
-
-Install the library:
-
-    npm install --save react-jvectormap jquery
-
-Or:
-
-    yarn add react-jvectormap jquery
-
-## Components
-
-The library provides two main components, `VectorMap` and `MultiMap`.
-
+Version 1.0.0 is still under construction and will be released soon!
