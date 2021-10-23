@@ -1,0 +1,15 @@
+{
+  "name": "jquery-mousewheel",
+  "main": "./jquery.mousewheel.js",
+  "ignore": [
+    "*.json",
+    "*.markdown",
+    "*.txt",
+    ".*",
+    "!LICENSE.txt",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  }
+}

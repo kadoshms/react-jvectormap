@@ -1,0 +1,13 @@
+{
+  "name": "@react-jvectormap/maps",
+  "version": "1.0.0",
+  "description": "A collection of ready-to-use maps for react-jvectormap",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  }
+}

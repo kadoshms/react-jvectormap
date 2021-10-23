@@ -1,0 +1,62 @@
+{
+  "name": "@react-jvectormap/jquery-mousewheel",
+  "version": "1.0.0",
+  "author": {
+    "name": "jQuery Foundation and other contributors",
+    "url": "https://github.com/jquery/jquery-mousewheel/blob/master/AUTHORS.txt"
+  },
+  "description": "A jQuery plugin that adds cross-browser mouse wheel support.",
+  "license": "MIT",
+  "homepage": "https://github.com/jquery/jquery-mousewheel",
+  "main": "./jquery.mousewheel.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jquery/jquery-mousewheel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jquery/jquery-mousewheel/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "jquery",
+    "mouse",
+    "wheel",
+    "event",
+    "mousewheel",
+    "jquery-plugin",
+    "browser"
+  ],
+  "files": [
+    "ChangeLog.md",
+    "jquery.mousewheel.js",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "yarn run lint && yarn run minify",
+    "minify": "uglifyjs -m -c --comments /Copyright/ -o jquery.mousewheel.min.js -- jquery.mousewheel.js",
+    "lint": "eslint jquery.mousewheel.js",
+    "karma": "karma start test/karma.conf.js",
+    "test": "echo Use karma for unit tests or load test/index.html in a browser."
+  },
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-jquery": "^3.0.0",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-qunit": "^4.1.2",
+    "karma-requirejs": "^1.1.0",
+    "qunit": "^2.14.1",
+    "requirejs": "^2.3.6",
+    "uglify-js": "^3.13.3"
+  }
+}

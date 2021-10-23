@@ -1,0 +1,49 @@
+{
+  "name": "@react-jvectormap/core",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Mor Kadosh <kadoshms@gmail.com>",
+  "homepage": "https://github.com/kadoshms/react-jvectormap#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "jquery": "^3.6.0",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadoshms/react-jvectormap.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf dist && yarn run build:types && yarn run build:bundle",
+    "build:bundle": "webpack --mode development",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "bugs": {
+    "url": "https://github.com/kadoshms/react-jvectormap/issues"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.6",
+    "@types/react": "^17.0.24",
+    "jquery": "^3.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "dependencies": {
+    "@react-jvectormap/lib": "^1.0.0",
+    "classnames": "^2.3.1"
+  }
+}

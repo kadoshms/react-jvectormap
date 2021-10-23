@@ -1,0 +1,18 @@
+{
+  "name": "@react-jvectormap/lib",
+  "version": "1.0.0",
+  "main": "jquery-jvectormap.min.js",
+  "types": "index.d.ts",
+  "repository": "git@github.com:bjornd/jvectormap.git",
+  "license": "(AGPL OR Commercial)",
+  "author": "Kirill Lebedev <echo.bjornd@gmail.com>",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@react-jvectormap/jquery-mousewheel": "^1.0.0"
+  }
+}

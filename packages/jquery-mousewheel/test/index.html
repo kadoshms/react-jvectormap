@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Mousewheel Unit Test</title>
+ 
+  <link rel="stylesheet" href="../node_modules/qunit/qunit/qunit.css">
+  <script src="../node_modules/qunit/qunit/qunit.js"></script>
+  <script>
+      var jqver = (window.location.search.match(/\bv=([0-9.]+(min)?)/) || [ "", "git" ])[1];
+      document.write( '<script src="http://code.jquery.com/jquery-' + jqver + '.js"><'+'/script>' );
+  </script>
+  <script src="../jquery.mousewheel.js"></script>
+  <script src="unit.js"></script>
+  <script>
+      jQuery(function($){
+          $(".jqversion").text(jqver);
+      });
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif }
+    h2.testnote { color: red }
+  </style>
+</head>
+<body>
+    <h1>Using jQuery <span class="jqversion">(unknown)</span></h1>
+    <p>Add <code>?v=1.8.3</code> or <code>?v=2.2.4.min</code> to specify a jQuery version from <code>code.jquery.com</code>.</p>
+    <h2 class="testnote">
+        In addition to unit tests, run the
+        <a href="manual.html">manual test</a> and <a href="scroll.html">scrolling test</a>
+        in all supported browsers.
+    </h2>
+
+    <div id="qunit"></div>
+ 
+</body>
+</html>

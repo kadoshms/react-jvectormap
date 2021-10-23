@@ -1,0 +1,27 @@
+.root {
+  .map {
+    width: 500px;
+    height: 500px;
+  }
+  .description {
+    margin-bottom: 20px;
+  }
+}
+
+:global(.jvectormap-legend-title) {
+  font-size: 12px;
+}
+
+:global(.jvectormap-legend .jvectormap-legend-tick-sample) {
+  height: 26px !important;
+}
+
+:global(.jvectormap-legend-icons) {
+  background: white !important;
+  border: black 1px solid;
+}
+
+:global(.jvectormap-legend-icons) {
+  color: black !important;
+}
+
