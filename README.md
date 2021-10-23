@@ -17,3 +17,8 @@ Install the library:
 Or:
 
     yarn add react-jvectormap jquery
+
+## Components
+
+The library provides two main components, `VectorMap` and `MultiMap`.
+
