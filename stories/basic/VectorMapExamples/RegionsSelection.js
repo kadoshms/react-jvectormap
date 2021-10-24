@@ -44,6 +44,7 @@ const map = new VectorMapBuilder(deMerc)
   .setRegionsSelectable(true)
   .setMarkersSelectable(true)
   .setSeries(series)
+  .setSelectedRegions(["DE-ST", "DE-RP"])
   .setMarkers(markers)
   .build();
 

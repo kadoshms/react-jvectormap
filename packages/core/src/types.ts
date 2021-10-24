@@ -148,7 +148,7 @@ export interface IVectorMapProps extends IMapComponent {
    * Set initially selected regions.
    * examples: ["US-CA"] | { "US-CA": true } | "US-CA"
    */
-  selectedRegions?: string[] | { [region: string]: boolean } | string;
+  selectedRegions?: SelectedEntities;
   /**
    * Object with two keys: markers and regions. Each of which is an array of series configs to be applied to the respective map elements.
    */
@@ -299,3 +299,8 @@ export type OnRegionTipShow = (
   el: Element,
   code: string,
 ) => void;
+
+export type SelectedEntities =
+  | string[]
+  | { [region: string]: boolean }
+  | string;
