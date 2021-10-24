@@ -6,6 +6,7 @@ import {
   IVectorMapProps,
   Marker,
   OnRegionTipShow,
+  SelectedEntities,
 } from "../../types";
 import { IBuilder } from "./types";
 
@@ -22,6 +23,7 @@ export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
   private onRegionTipShow?: OnRegionTipShow;
   private series?: ISeries;
   private labels?: ILabels;
+  private selectedRegions?: SelectedEntities = [];
 
   public constructor(map: IVectorMap) {
     this.map = map;
@@ -152,6 +154,15 @@ export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
 
   /**
    *
+   * @param value
+   */
+  public setSelectedRegions(value: SelectedEntities) {
+    this.selectedRegions = value;
+    return this;
+  }
+
+  /**
+   *
    */
   public build() {
     return {
@@ -166,6 +177,7 @@ export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
       regionsSelectable: this.regionsSelectable,
       markers: this.markers,
       labels: this.labels,
+      selectedRegions: this.selectedRegions,
     };
   }
 }
