@@ -17,6 +17,7 @@ export * from "./FranceRegions";
 export * from "./FranceRegions2016";
 export * from "./Germany";
 export * from "./India";
+export * from "./Iran";
 export * from "./Italy";
 export * from "./ItalyRegions";
 export * from "./Netherlands";
