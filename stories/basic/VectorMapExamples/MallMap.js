@@ -1,9 +1,3 @@
-import {
-  VectorMapBuilder,
-  SeriesBuilder,
-  AttributeSeriesBuilder,
-  StyleBuilder,
-} from "@react-jvectormap/core";
 import { mallMap } from "./data/mallMap";
 
 const map = {

@@ -17,7 +17,9 @@ export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
   private zoomMax?: number;
   private markers?: Marker[];
   private markerStyle?: ISVGElementStyleAttributes;
-  private regionStyle?: ISVGElementStyleAttributes;
+  private regionStyle?:
+    | ISVGElementStyleAttributes
+    | ((code: string) => ISVGElementStyleAttributes);
   private regionsSelectable?: boolean;
   private markersSelectable?: boolean;
   private onRegionTipShow?: OnRegionTipShow;
@@ -90,7 +92,11 @@ export class VectorMapBuilder implements IBuilder<IVectorMapProps> {
    *
    * @param value
    */
-  public setRegionStyle(value: ISVGElementStyleAttributes) {
+  public setRegionStyle(
+    value:
+      | ISVGElementStyleAttributes
+      | ((code: string) => ISVGElementStyleAttributes),
+  ) {
     this.regionStyle = value;
     return this;
   }

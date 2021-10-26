@@ -906,11 +906,18 @@ jvm.Map.prototype = {
     this.regionLabelsGroup = this.regionLabelsGroup || this.canvas.addGroup();
 
     for (key in this.mapData.paths) {
+      const regionStyle =
+        typeof this.params.regionStyle === "function"
+          ? {
+              ...jvm.Map.defaultParams.regionStyle,
+              ...this.params.regionStyle(key),
+            }
+          : this.params.regionStyle;
       region = new jvm.Region({
         map: this,
         path: this.mapData.paths[key].path,
         code: key,
-        style: jvm.$.extend(true, {}, this.params.regionStyle),
+        style: jvm.$.extend(true, {}, regionStyle),
         labelStyle: jvm.$.extend(true, {}, this.params.regionLabelStyle),
         canvas: this.canvas,
         labelsGroup: this.regionLabelsGroup,

@@ -9,6 +9,7 @@ import { default as RegionLabelsArgs } from "./VectorMapExamples/RegionLabels";
 import { default as MallMapArgs } from "./VectorMapExamples/MallMap";
 import { default as MarkerIconsArgs } from "./VectorMapExamples/MarkerIcons";
 import { default as MapLegendsArgs } from "./VectorMapExamples/MapLegends";
+import { default as DynamicRegionStyleArgs } from "./VectorMapExamples/DynamicRegionStyle";
 
 import {
   default as ReverseProjectionArgs,
@@ -60,3 +61,6 @@ MapLegends.args = MapLegendsArgs;
 
 export const MarkerIcons = VectorMapTemplate.bind({});
 MarkerIcons.args = MarkerIconsArgs;
+
+export const DynamicRegionStyle = VectorMapTemplate.bind({});
+DynamicRegionStyle.args = DynamicRegionStyleArgs;

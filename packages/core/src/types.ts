@@ -77,7 +77,9 @@ export interface IVectorMapProps extends IMapComponent {
   /**
    * Set the styles for the map's regions. Each region or marker has four states: initial (default state), hover (when the mouse cursor is over the region or marker), selected (when region or marker is selected), selectedHover (when the mouse cursor is over the region or marker and it's selected simultaneously). Styles could be set for each of this states.
    */
-  regionStyle?: ISVGElementStyleAttributes;
+  regionStyle?:
+    | ISVGElementStyleAttributes
+    | ((code: string) => ISVGElementStyleAttributes);
   /**
    * Set the styles for the regions' labels. Each region or marker has four states: initial (default state), hover (when the mouse cursor is over the region or marker), selected (when region or marker is selected), selectedHover (when the mouse cursor is over the region or marker and it's selected simultaneously). Styles could be set for each of this states.
    */
