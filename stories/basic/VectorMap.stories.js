@@ -21,6 +21,11 @@ import {
   RandomColorsTemplate,
 } from "./VectorMapExamples/RandomColors";
 
+import {
+  default as FocusOnCountriesArgs,
+  FocusOnCountriesTemplate,
+} from "./VectorMapExamples/FocusOnCountries";
+
 import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
 
 export default {
@@ -64,3 +69,6 @@ MarkerIcons.args = MarkerIconsArgs;
 
 export const DynamicRegionStyle = VectorMapTemplate.bind({});
 DynamicRegionStyle.args = DynamicRegionStyleArgs;
+
+export const FocusOnCountries = FocusOnCountriesTemplate.bind({});
+FocusOnCountries.args = FocusOnCountriesArgs;
