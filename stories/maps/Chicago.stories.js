@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { usIlChicagoMerc, usIlChicagoMill } from "@react-jvectormap/maps";
+import { usIlChicagoMill, usIlChicagoMerc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,12 +10,12 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: usIlChicagoMerc,
-  fileName: "usIlChicagoMerc",
+  map: usIlChicagoMill,
+  fileName: "usIlChicagoMill",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: usIlChicagoMill,
-  fileName: "usIlChicagoMill",
+  map: usIlChicagoMerc,
+  fileName: "usIlChicagoMerc",
 };

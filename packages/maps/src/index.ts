@@ -5,6 +5,7 @@ export * from "./Asia";
 export * from "./Australia";
 export * from "./Austria";
 export * from "./Belgium";
+export * from "./Brazil";
 export * from "./Canada";
 export * from "./Chicago";
 export * from "./China";

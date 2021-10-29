@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { continentsMerc, continentsMill } from "@react-jvectormap/maps";
+import { continentsMill, continentsMerc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,12 +10,12 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: continentsMerc,
-  fileName: "continentsMerc",
+  map: continentsMill,
+  fileName: "continentsMill",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: continentsMill,
-  fileName: "continentsMill",
+  map: continentsMerc,
+  fileName: "continentsMerc",
 };

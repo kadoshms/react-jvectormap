@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { caLcc, caMerc, caMill } from "@react-jvectormap/maps";
+import { caMill, caMerc, caLcc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,8 +10,8 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: caLcc,
-  fileName: "caLcc",
+  map: caMill,
+  fileName: "caMill",
 };
 
 export const Mercator = MapTemplate.bind({});
@@ -22,6 +22,6 @@ Mercator.args = {
 
 export const Lambert = MapTemplate.bind({});
 Lambert.args = {
-  map: caMill,
-  fileName: "caMill",
+  map: caLcc,
+  fileName: "caLcc",
 };

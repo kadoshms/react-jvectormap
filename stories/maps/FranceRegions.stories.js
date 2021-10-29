@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { frRegionsMerc, frRegionsMill } from "@react-jvectormap/maps";
+import { frRegionsMill, frRegionsMerc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,12 +10,12 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: frRegionsMerc,
-  fileName: "frRegionsMerc",
+  map: frRegionsMill,
+  fileName: "frRegionsMill",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: frRegionsMill,
-  fileName: "frRegionsMill",
+  map: frRegionsMerc,
+  fileName: "frRegionsMerc",
 };

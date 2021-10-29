@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { deMerc, deMill } from "@react-jvectormap/maps";
+import { deMill, deMerc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,12 +10,12 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: deMerc,
-  fileName: "deMerc",
+  map: deMill,
+  fileName: "deMill",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: deMill,
-  fileName: "deMill",
+  map: deMerc,
+  fileName: "deMerc",
 };

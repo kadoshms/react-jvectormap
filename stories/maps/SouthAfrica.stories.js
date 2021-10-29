@@ -1,5 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { zaMerc, zaMill } from "@react-jvectormap/maps";
+import { zaMill, zaMerc } from "@react-jvectormap/maps";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -10,12 +10,12 @@ export default {
 
 export const Miller = MapTemplate.bind({});
 Miller.args = {
-  map: zaMerc,
-  fileName: "zaMerc",
+  map: zaMill,
+  fileName: "zaMill",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: zaMill,
-  fileName: "zaMill",
+  map: zaMerc,
+  fileName: "zaMerc",
 };

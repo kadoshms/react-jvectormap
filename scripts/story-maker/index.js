@@ -24,20 +24,20 @@ const getProjections = (maps) => {
   ].reduce((acc, cur) => {
     const [suff, name] = cur;
     if (maps.find((x) => x.includes(suff))) {
-      return acc.concat(name);
+      return acc.concat([[suff, name]]);
     }
     return acc;
   }, []);
 };
 
 countries.forEach((country) => {
-  const maps = getMaps(`${mapsSource}/${country}/`);
+  const maps = getMaps(`${mapsSource}/${country}/`).reverse();
   const imports = maps.join(", ");
   const projections = getProjections(maps);
-  const exports = projections.map((proj, i) => `export const ${proj} = MapTemplate.bind({});
+  const exports = projections.map(([suff, proj], i) => `export const ${proj} = MapTemplate.bind({});
   ${proj}.args = {
-    map: ${maps[i]},
-    fileName: '${maps[i]}'
+    map: ${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))},
+    fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}'
   };
 `).join('\n');
         const story = `import { VectorMap } from "@react-jvectormap/core";
@@ -49,7 +49,7 @@ countries.forEach((country) => {
     component: VectorMap,
     argTypes: {},
   };
-  
+
   ${exports}
   `;
 
