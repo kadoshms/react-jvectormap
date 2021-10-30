@@ -9,13 +9,7 @@ import { loadJQueryMouseWheel } from "@react-jvectormap/jquery-mousewheel";
  */
 export const loadJVectorMap = ($) =>
   (function (factory) {
-    if (typeof exports === "object") {
-      module.exports = factory;
-    } else if (typeof define === "function" && define.amd) {
-      define(["jquery"], factory);
-    } else {
-      factory($);
-    }
+    factory($);
   })(function ($) {
     loadJQueryMouseWheel($);
     jvm.$ = $;
