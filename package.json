@@ -15,7 +15,8 @@
   },
   "resolutions": {
     "trim": "^0.0.3",
-    "glob-parent": "^5.1.2"
+    "glob-parent": "^5.1.2",
+    "immer": "^9.0.6"
   },
   "workspaces": [
     "packages/*"
