@@ -13,9 +13,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "lib"
-  ],
   "peerDependencies": {
     "jquery": "^3.6.0",
     "react": "~17.0.2",
