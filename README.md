@@ -230,7 +230,7 @@ or
 
 Or, for bundling optimizations purposes (Recommended!):
 
-`import usMill from '@react-jvectormap/maps/UnitedStates/usMill`;
+`import usMill from "@react-jvectormap/maps/dist/UnitedStates/usMill.json";`
 
 ```
     <VectorMap map={usMill} ... />
