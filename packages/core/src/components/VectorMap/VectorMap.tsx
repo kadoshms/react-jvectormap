@@ -1,12 +1,6 @@
-import React, {
-  FC,
-  MutableRefObject,
-  Ref,
-  useLayoutEffect,
-  useRef,
-} from "react";
+import React, { FC, Ref, useLayoutEffect, useRef } from "react";
 import $ from "jquery";
-import { IVectorMapProps } from "../../types";
+import { IVectorMapProps, MapObject } from "../../types";
 import { MapContainer } from "../MapContainer";
 
 export const VectorMap: FC<IVectorMapProps> = ({
@@ -30,17 +24,19 @@ export const VectorMap: FC<IVectorMapProps> = ({
         ...props,
       });
       if (mapRef) {
-        (mapRef as MutableRefObject<JQuery>).current = $(
-          mapContainer,
-        ).vectorMap("get", "mapObject");
+        mapRef.current = $(mapContainer).vectorMap(
+          "get",
+          "mapObject",
+        ) as unknown as MapObject;
       }
     }
 
     return () => {
-      (mapRef as MutableRefObject<JQuery>)?.current.remove();
       if (mapContainer) {
         const mapObject = $(mapContainer).vectorMap("remove");
-        mapObject.remove();
+        if (mapObject) {
+          mapObject.remove();
+        }
       }
     };
   }, [map, mapRef, props]);

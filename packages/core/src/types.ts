@@ -1,12 +1,114 @@
-import { Ref, CSSProperties } from "react";
+import { CSSProperties, MutableRefObject, Ref } from "react";
 
 export type Nullable<T> = null | T;
+
+interface ISetFocusParams {
+  regions?: string[];
+  region?: string;
+  scale?: number;
+  lat?: number;
+  lng?: number;
+  x?: number;
+  y?: number;
+  animate?: boolean;
+}
+
+export interface IMapObject {
+  /**
+   * Add one marker to the map.
+   * @param key
+   * @param marker
+   * @param seriesData
+   */
+  addMarker: (
+    key: string,
+    marker: Marker,
+    seriesData: IAttributeSeries[],
+  ) => void;
+  /**
+   * Add set of marker to the map.
+   * @param key
+   */
+  addMarkers: (markers: Marker[], seriesData: IAttributeSeries[]) => void;
+  /**
+   * Remove the selected state from all the currently selected markers.
+   */
+  clearSelectedMarkers: () => void;
+  /**
+   * Remove the selected state from all the currently selected regions.
+   */
+  clearSelectedRegions: () => void;
+  /**
+   * Get the name of a region
+   */
+  getRegionName: (code: string) => void;
+  /**
+   * Return the codes of currently selected markers.
+   */
+  getSelectedMarkers: () => Marker[];
+  /**
+   * Return the codes of currently selected regions.
+   */
+  getSelectedRegions: () => IRegion[];
+  /**
+   * Converts coordinates expressed as latitude and longitude to the coordinates in pixels on the map.
+   */
+  latLngToPoint: (lat: number, lng: number) => number[];
+  /**
+   * Converts cartesian coordinates into coordinates expressed as latitude and longitude.
+   */
+  pointToLatLng: (x: number, y: number) => number[];
+  /**
+   * Gracefully remove the map and and all its accessories, unbind event handlers.
+   */
+  remove: () => void;
+  /**
+   * Remove all markers from the map.
+   */
+  removeAllMarkers: () => void;
+  /**
+   * Remove some markers from the map.
+   */
+  removeMarkers: () => void;
+  /**
+   * Reset all the series and show the map with the initial zoom.
+   */
+  reset: () => void;
+  /**
+   * Set background color of the map.
+   */
+  setBackgroundColor: (backgroundColor: string) => void;
+  /**
+   * Set the map's viewport to the specific point and set zoom of the map to the specific level. Point and zoom level could be defined in two ways: using the code of some region to focus on or a central point and zoom level as numbers.
+   */
+  setFocus: (params: ISetFocusParams) => void;
+  /**
+   * Set or remove selected state for the markers.
+   * @param keys
+   */
+  setSelectedMarkers: (
+    keys: string | string[] | { [key: string]: boolean },
+  ) => void;
+  /**
+   * Set or remove selected state for the regions.
+   * @param keys
+   */
+  setSelectedRegions: (
+    keys: string | string[] | { [key: string]: boolean },
+  ) => void;
+  /**
+   * Synchronize the size of the map with the size of the container. Suitable in situations where the size of the container is changed programmatically or container is shown after it became visible.
+   */
+  updateSize: () => void;
+}
+
+export type MapObject = Ref<IMapObject>;
 
 interface IMapComponent {
   /**
    * Optional ref for accessing map methods
    */
-  mapRef?: Ref<JQuery | null>;
+  mapRef?: MutableRefObject<MapObject>;
   /**
    * Container class Name
    */
