@@ -102,13 +102,13 @@ export interface IMapObject {
   updateSize: () => void;
 }
 
-export type MapObject = Ref<IMapObject>;
+export type MapObject = IMapObject;
 
 interface IMapComponent {
   /**
    * Optional ref for accessing map methods
    */
-  mapRef?: MutableRefObject<MapObject>;
+  mapRef?: MutableRefObject<MapObject | null>;
   /**
    * Container class Name
    */
