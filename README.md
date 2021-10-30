@@ -1,4 +1,4 @@
-# React jvectormap
+# @react-jvectormap
 
 ![Logo](logo.png)
 
