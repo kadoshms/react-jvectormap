@@ -29,6 +29,7 @@ export * from "./Norway";
 export * from "./Oceania";
 export * from "./Poland";
 export * from "./Portugal";
+export * from "./PuertoRico";
 export * from "./Russia";
 export * from "./RussiaFederalDistricts";
 export * from "./SouthAfrica";
