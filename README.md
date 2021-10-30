@@ -14,6 +14,11 @@ or
 
 `yarn add @react-jvectormap/core jquery`
 
+To see examples, and play with the library, visit the project Storybook:
+
+https://61685594b935d4003a3a6f2c-fcgvwodumn.chromatic.com/
+[![npm version](https://badge.fury.io/js/@react-jvectormap/core)](https://badge.fury.io/js/react)
+
 # Basic Usage
 
 ## VectorMap
