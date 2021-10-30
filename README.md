@@ -2,6 +2,9 @@
 
 ![Logo](logo.png)
 
+[![npm version](https://badge.fury.io/js/@react-jvectormap%2Fcore.svg)](https://badge.fury.io/js/@react-jvectormap%2Fcore)
+
+
 ## About
 
 A simple wrapper for [jvectormap](http://jvectormap.com/)
@@ -17,8 +20,6 @@ or
 To see examples, and play with the library, visit the project Storybook:
 
 https://61685594b935d4003a3a6f2c-fcgvwodumn.chromatic.com/
-[![npm version](https://badge.fury.io/js/@react-jvectormap/core)](https://badge.fury.io/js/react)
-
 # Basic Usage
 
 ## VectorMap
@@ -235,7 +236,7 @@ Or, for bundling optimizations purposes (Recommended!):
     <VectorMap map={usMill} ... />
 ```
 
-### Available Maps
+### Available Prebuilt Maps
 
 | Continent/Country/City | Miller             | Mercator           | Lambert | Albers     | Misc |
 | ---------------------- | ------------------ | ------------------ | ------- | ---------- | ---- |
@@ -286,6 +287,27 @@ Or, for bundling optimizations purposes (Recommended!):
 | Venezuela              | veMill             | veMerc             | -       | -          |
 | World                  | worldMill          | worldMerc          | -       | -          |
 
-## Prop Builders
+## Custom Maps
+
+A `@react-jvectormap` map is represented by the following JSON schema:
+
+```
+{
+    "name": string,
+    "content": {
+        "paths": {
+            [REGION_CODE]: {
+                path: string (SVG Path)
+                "name": string;
+            }
+        }
+    },
+    "projection(optional)": { "type": string, "centralMeridian": number },
+    "height": number,
+    "width": number
+}
+```
+
+# Prop Builders
 
 TBD
