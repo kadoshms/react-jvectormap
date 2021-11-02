@@ -10,7 +10,7 @@ const getDirectories = (source) =>
 const getMaps = (source) =>
   fs
     .readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index'].find(x => dirent.name.includes(x))))
+    .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index', 'README'].find(x => dirent.name.includes(x))))
     .map((dirent) => dirent.name.split(".")[0]);
 
 const countries = getDirectories(mapsSource);
@@ -53,6 +53,39 @@ countries.forEach((country) => {
   ${exports}
   `;
 
+  const mapList = maps.map(x => `   - ${x}`).join('  \n');
+
   const fileName = `${country}.stories.js`;
-  fs.writeFileSync(`../../stories/maps/${fileName}`, story);
+  const readme = `# @react-jvectormap/africa
+
+A collection of JvectorMap maps of ${country}.
+
+Available Maps:
+${mapList}
+
+## Installation:
+\`\`\`
+    yarn add @react-jvectormap/${country.toLowerCase()}
+\`\`\`
+
+or:
+
+\`\`\`
+    npm install --save @react-jvectormap/${country.toLowerCase()}
+\`\`\`
+
+## Usage
+
+\`\`\`
+    import { ${maps[0]} } from '@react-jvectormap/${country.toLowerCase()}';
+ \`\`\`   
+
+or:
+
+\`\`\`
+    import ${maps[0]} from '@react-jvectormap/${country.toLowerCase()}/dist/${maps[0]}';
+ \`\`\`   
+`
+
+  fs.writeFileSync(`../../packages/maps/${country}/README.md`, readme);
 });
