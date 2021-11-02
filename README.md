@@ -4,7 +4,6 @@
 
 [![npm version](https://badge.fury.io/js/@react-jvectormap%2Fcore.svg)](https://badge.fury.io/js/@react-jvectormap%2Fcore)
 
-
 ## About
 
 A simple wrapper for [jvectormap](http://jvectormap.com/)
@@ -20,6 +19,7 @@ or
 To see examples, and play with the library, visit the project Storybook:
 
 https://61685594b935d4003a3a6f2c-fcgvwodumn.chromatic.com/
+
 # Basic Usage
 
 ## VectorMap
@@ -238,54 +238,54 @@ Or, for bundling optimizations purposes (Recommended!):
 
 ### Available Prebuilt Maps
 
-| Continent/Country/City | Miller             | Mercator           | Lambert | Albers     | Misc |
-| ---------------------- | ------------------ | ------------------ | ------- | ---------- | ---- |
-| Africa                 | africaMill         | africaMerc         | -       | -          |
-| Algeria                | dzMill             | -                  | -       | -          |
-| Argentina              | arMill             | arMerc             | -       | -          |
-| Asia                   | asiaMill           | asiaMerc           | -       | -          |
-| Australia              | auMill             | auMerc             | -       | -          |
-| Austria                | atMill             | atMerc             | -       | -          |
-| Belgium                | beMill             | beMerc             | -       | -          |
-| Brazil                 | brMill             | -                  | -       | -          |
-| Canada                 | caMill             | caMerc             | caLcc   | -          |
-| Chicago                | usIlChicagoMill    | usIlChicagoMerc    | -       | -          |
-| China                  | cnMill             | cnMerc             | -       | -          |
-| Colombia               | coMill             | coMerc             | -       | -          |
-| Continents             | continentsMill     | continentsMerc     | -       | -          |
-| Denmark                | dkMill             | dkMerc             | -       | -          |
-| Europe                 | europeMill         | europeMerc         | -       | -          |
-| France                 | frMill             | frMerc             | -       | -          |
-| FranceRegions          | frRegionsMill      | frRegionsMerc      | -       | -          |
-| FranceRegions2016      | frRegions_2016Mill | frRegions_2016Merc | -       | -          |
-| Germany                | deMill             | deMerc             | -       | -          |
-| India                  | inMill             | inMerc             | -       | -          |
-| Iran                   | iranMill           | -                  | -       | -          |
-| Italy                  | itMill             | itMerc             | -       | -          |
-| ItalyRegions           | itRegionsMill      | itRegionsMerc      | -       | -          |
-| Netherlands            | nlMill             | nlMerc             | -       | -          |
-| NewYork                | usNyNewYorkMill    | usNyNewYorkMerc    | -       | -          |
-| NewZiland              | nzMill             | nzMerc             | -       | -          |
-| NorthAmerica           | northAmericaMill   | northAmericaMerc   | -       | -          |
-| Norway                 | noMill             | noMerc             | -       | -          |
-| Oceania                | oceaniaMill        | oceaniaMerc        | -       | -          |
-| Poland                 | plMill             | plMerc             | -       | -          |
-| Portugal               | ptMill             | ptMerc             | -       | -          |
-| PuertoRico             | -                  | -                  | -       | puertoRico |
-| Russia                 | ruMill             | ruMerc             | -       | -          |
-| RussiaFederalDistricts | ruFdMill           | ruFdMerc           | -       | -          |
-| SouthAfrica            | zaMill             | zaMerc             | -       | -          |
-| SouthAmerica           | southAmericaMill   | southAmericaMerc   | -       | -          |
-| SouthKorea             | krMill             | krMerc             | -       | -          |
-| Spain                  | esMill             | esMerc             | -       | -          |
-| Sweden                 | seMill             | seMerc             | -       | -          |
-| Switzerland            | chMill             | chMerc             | -       | -          |
-| Thailand               | thMill             | thMerc             | -       | -          |
-| UkRegions              | ukRegionsMill      | ukRegionsMerc      | -       | -          |
-| UnitedKingdomCountries | ukCountriesMill    | ukCountriesMerc    | -       | -          |
-| UnitedStates           | useMerc            | usMill             | usLcc   | usAea      |
-| Venezuela              | veMill             | veMerc             | -       | -          |
-| World                  | worldMill          | worldMerc          | -       | -          |
+| Continent/Country/City | Miller             | Mercator           | Lambert | Albers | Misc       | Package Name                             |
+| ---------------------- | ------------------ | ------------------ | ------- | ------ | ---------- | ---------------------------------------- |
+| Africa                 | africaMill         | africaMerc         | -       | -      | -          | @react-jvectormap/africa                 |
+| Algeria                | dzMill             | -                  | -       | -      | -          | @react-jvectormap/algeria                |
+| Argentina              | arMill             | arMerc             | -       | -      | -          | @react-jvectormap/argentina              |
+| Asia                   | asiaMill           | asiaMerc           | -       | -      | -          | @react-jvectormap/asia                   |
+| Australia              | auMill             | auMerc             | -       | -      | -          | @react-jvectormap/australia              |
+| Austria                | atMill             | atMerc             | -       | -      | -          | @react-jvectormap/austria                |
+| Belgium                | beMill             | beMerc             | -       | -      | -          | @react-jvectormap/belgium                |
+| Brazil                 | brMill             | -                  | -       | -      | -          | @react-jvectormap/brazil                 |
+| Canada                 | caMill             | caMerc             | caLcc   | -      | -          | @react-jvectormap/canada                 |
+| Chicago                | usIlChicagoMill    | usIlChicagoMerc    | -       | -      | -          | @react-jvectormap/chicago                |
+| China                  | cnMill             | cnMerc             | -       | -      | -          | @react-jvectormap/china                  |
+| Colombia               | coMill             | coMerc             | -       | -      | -          | @react-jvectormap/colombia               |
+| Continents             | continentsMill     | continentsMerc     | -       | -      | -          | @react-jvectormap/continents             |
+| Denmark                | dkMill             | dkMerc             | -       | -      | -          | @react-jvectormap/denmark                |
+| Europe                 | europeMill         | europeMerc         | -       | -      | -          | @react-jvectormap/europe                 |
+| France                 | frMill             | frMerc             | -       | -      | -          | @react-jvectormap/france                 |
+| FranceRegions          | frRegionsMill      | frRegionsMerc      | -       | -      | -          | @react-jvectormap/franceregions          |
+| FranceRegions2016      | frRegions_2016Mill | frRegions_2016Merc | -       | -      | -          | @react-jvectormap/franceregions2016      |
+| Germany                | deMill             | deMerc             | -       | -      | -          | @react-jvectormap/germany                |
+| India                  | inMill             | inMerc             | -       | -      | -          | @react-jvectormap/india                  |
+| Iran                   | iranMill           | -                  | -       | -      | -          | @react-jvectormap/iran                   |
+| Italy                  | itMill             | itMerc             | -       | -      | -          | @react-jvectormap/italy                  |
+| ItalyRegions           | itRegionsMill      | itRegionsMerc      | -       | -      | -          | @react-jvectormap/italyregions           |
+| Netherlands            | nlMill             | nlMerc             | -       | -      | -          | @react-jvectormap/netherlands            |
+| NewYork                | usNyNewYorkMill    | usNyNewYorkMerc    | -       | -      | -          | @react-jvectormap/newyork                |
+| NewZiland              | nzMill             | nzMerc             | -       | -      | -          | @react-jvectormap/newziland              |
+| NorthAmerica           | northAmericaMill   | northAmericaMerc   | -       | -      | -          | @react-jvectormap/northamerica           |
+| Norway                 | noMill             | noMerc             | -       | -      | -          | @react-jvectormap/norway                 |
+| Oceania                | oceaniaMill        | oceaniaMerc        | -       | -      | -          | @react-jvectormap/oceania                |
+| Poland                 | plMill             | plMerc             | -       | -      | -          | @react-jvectormap/poland                 |
+| Portugal               | ptMill             | ptMerc             | -       | -      | -          | @react-jvectormap/portugal               |
+| PuertoRico             | -                  | -                  | -       | -      | puertoRico | @react-jvectormap/puertorico             |
+| Russia                 | ruMill             | ruMerc             | -       | -      | -          | @react-jvectormap/russia                 |
+| RussiaFederalDistricts | ruFdMill           | ruFdMerc           | -       | -      | -          | @react-jvectormap/russiafederaldistricts |
+| SouthAfrica            | zaMill             | zaMerc             | -       | -      | -          | @react-jvectormap/southafrica            |
+| SouthAmerica           | southAmericaMill   | southAmericaMerc   | -       | -      | -          | @react-jvectormap/southamerica           |
+| SouthKorea             | krMill             | krMerc             | -       | -      | -          | @react-jvectormap/southkorea             |
+| Spain                  | esMill             | esMerc             | -       | -      | -          | @react-jvectormap/spain                  |
+| Sweden                 | seMill             | seMerc             | -       | -      | -          | @react-jvectormap/sweden                 |
+| Switzerland            | chMill             | chMerc             | -       | -      | -          | @react-jvectormap/switzerland            |
+| Thailand               | thMill             | thMerc             | -       | -      | -          | @react-jvectormap/thailand               |
+| UkRegions              | ukRegionsMill      | ukRegionsMerc      | -       | -      | -          | @react-jvectormap/ukregions              |
+| UnitedKingdomCountries | ukCountriesMill    | ukCountriesMerc    | -       | -      | -          | @react-jvectormap/unitedkingdomcountries |
+| UnitedStates           | usAea              | usMill             | useMerc | usLcc  | -          | @react-jvectormap/unitedstates           |
+| Venezuela              | veMill             | veMerc             | -       | -      | -          | @react-jvectormap/venezuela              |
+| World                  | worldMill          | worldMerc          | -       | -      | -          | @react-jvectormap/world                  |
 
 ## Custom Maps
 
