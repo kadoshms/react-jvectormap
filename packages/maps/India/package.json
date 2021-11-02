@@ -1,9 +1,12 @@
 {
   "name": "@react-jvectormap/india",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

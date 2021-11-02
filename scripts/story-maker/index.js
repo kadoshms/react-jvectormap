@@ -32,30 +32,45 @@ const getProjections = (maps) => {
 };
 
 countries.forEach((country) => {
-  const maps = getMaps(`${mapsSource}/${country}/`).reverse();
-  const imports = maps.join(", ");
-  const projections = getProjections(maps);
-  const exports = projections.map(([suff, proj], i) => `export const ${proj} = MapTemplate.bind({});
-  ${proj}.args = {
-    map: ${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))},
-    fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}',
-    country: '${country.toLowerCase()}',
-  };
-`).join('\n');
-  const story = `import { VectorMap } from "@react-jvectormap/core";
-  import { ${imports} } from "@react-jvectormap/${country.toLowerCase()}";
-  import { MapTemplate } from "../components/MapContainer/MapTemplate";
+//   const maps = getMaps(`${mapsSource}/${country}/`).reverse();
+//   const imports = maps.join(", ");
+//   const projections = getProjections(maps);
+//   const exports = projections.map(([suff, proj], i) => `export const ${proj} = MapTemplate.bind({});
+//   ${proj}.args = {
+//     map: ${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))},
+//     fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}',
+//     country: '${country.toLowerCase()}',
+//   };
+// `).join('\n');
+//   const story = `import { VectorMap } from "@react-jvectormap/core";
+//   import { ${imports} } from "@react-jvectormap/${country.toLowerCase()}";
+//   import { MapTemplate } from "../components/MapContainer/MapTemplate";
+//
+//   export default {
+//     title: "maps/Map/${country}",
+//     component: VectorMap,
+//     argTypes: {},
+//   };
+//
+//   ${exports}
+//   `;
+//
+//   const fileName = `${country}.stories.js`;
 
-  export default {
-    title: "maps/Map/${country}",
-    component: VectorMap,
-    argTypes: {},
-  };
+  const package = `{
+  "name": "@react-jvectormap/${country.toLowerCase()}",
+  "version": "1.0.0-alpha.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+`
 
-  ${exports}
-  `;
-
-  const fileName = `${country}.stories.js`;
-  fs.writeFileSync(`../../stories/maps/${fileName}`, story);
+  fs.writeFileSync(`../../packages/maps/${country}/package.json`, package);
 });
 
