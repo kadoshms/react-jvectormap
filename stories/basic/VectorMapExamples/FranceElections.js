@@ -1,4 +1,4 @@
-import { frRegionsMerc } from "@react-jvectormap/maps";
+import { frRegionsMerc } from "@react-jvectormap/franceregions";
 import {
   VectorMapBuilder,
   SeriesBuilder,

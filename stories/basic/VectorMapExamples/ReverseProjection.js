@@ -1,4 +1,4 @@
-import { usLcc } from "@react-jvectormap/maps";
+import { usLcc } from "@react-jvectormap/unitedstates";
 import { MapContainer } from "../../components/MapContainer/MapContainer";
 import React, { useLayoutEffect, useRef, useMemo } from "react";
 import { VectorMap } from "@react-jvectormap/core";

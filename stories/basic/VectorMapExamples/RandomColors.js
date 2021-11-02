@@ -1,4 +1,4 @@
-import { esMill } from "@react-jvectormap/maps";
+import { esMill } from "@react-jvectormap/spain";
 import {
   VectorMapBuilder,
   SeriesBuilder,

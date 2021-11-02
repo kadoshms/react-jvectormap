@@ -1,4 +1,4 @@
-import { usAea } from "@react-jvectormap/maps";
+import { usAea } from "@react-jvectormap/unitedstates";
 const map = {
   map: usAea,
   regionLabelStyle: {

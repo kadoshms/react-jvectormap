@@ -1,4 +1,4 @@
-import { worldMill } from "@react-jvectormap/maps";
+import { worldMill } from "@react-jvectormap/world";
 import { gdpData } from "./data/gdpData";
 
 export default {

@@ -1,4 +1,4 @@
-import { worldMerc } from "@react-jvectormap/maps";
+import { worldMerc } from "@react-jvectormap/world";
 import { VectorMapBuilder } from "@react-jvectormap/core";
 import { MapContainer } from "../../components/MapContainer/MapContainer";
 import React, { useRef } from "react";

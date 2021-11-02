@@ -1,4 +1,4 @@
-import { worldMill } from "@react-jvectormap/maps";
+import { worldMill } from "@react-jvectormap/world";
 import { initial, hover } from "./data/USStatetsColors";
 
 export default {

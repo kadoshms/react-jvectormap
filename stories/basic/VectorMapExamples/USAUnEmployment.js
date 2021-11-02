@@ -1,4 +1,4 @@
-import { usMill } from "@react-jvectormap/maps";
+import { usMill } from "@react-jvectormap/unitedstates";
 import { USAUnemploymentData as data } from "./data/USAUnemploymentData";
 
 const val = 2009;

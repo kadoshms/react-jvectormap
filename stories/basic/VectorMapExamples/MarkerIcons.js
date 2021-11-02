@@ -1,4 +1,4 @@
-import { deMerc } from "@react-jvectormap/maps";
+import { deMerc } from "@react-jvectormap/germany";
 
 const plants = [
   {

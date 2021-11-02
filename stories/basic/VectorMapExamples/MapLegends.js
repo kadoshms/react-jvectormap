@@ -1,4 +1,4 @@
-import { usMill } from "@react-jvectormap/maps";
+import { usMill } from "@react-jvectormap/unitedstates";
 
 export default {
   map: usMill,
