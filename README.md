@@ -218,11 +218,11 @@ Available props:
 
 In order to use a pre-built map, run:
 
-`npm install --save @react-jvectormap/maps`
+`npm install --save @react-jvectormap/spain`
 
 or
 
-`yarn add @react-jvectormap/maps`
+`yarn add @react-jvectormap/spain`
 
 ### Usage
 

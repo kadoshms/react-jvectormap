@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { asiaMill, asiaMerc, README } from "@react-jvectormap/maps";
-import { asiaMill, asiaMerc, README } from "@react-jvectormap/asia";
+import { asiaMill, asiaMerc } from "@react-jvectormap/asia";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: asiaMill,
   fileName: "asiaMill",
+  country: "asia",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: asiaMerc,
   fileName: "asiaMerc",
+  country: "asia",
 };

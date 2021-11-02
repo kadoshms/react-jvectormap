@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { plMill, plMerc, README } from "@react-jvectormap/maps";
-import { plMill, plMerc, README } from "@react-jvectormap/poland";
+import { plMill, plMerc } from "@react-jvectormap/poland";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: plMill,
   fileName: "plMill",
+  country: "poland",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: plMerc,
   fileName: "plMerc",
+  country: "poland",
 };

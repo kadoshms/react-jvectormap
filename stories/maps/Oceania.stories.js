@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { oceaniaMill, oceaniaMerc, README } from "@react-jvectormap/maps";
-import { oceaniaMill, oceaniaMerc, README } from "@react-jvectormap/oceania";
+import { oceaniaMill, oceaniaMerc } from "@react-jvectormap/oceania";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: oceaniaMill,
   fileName: "oceaniaMill",
+  country: "oceania",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: oceaniaMerc,
   fileName: "oceaniaMerc",
+  country: "oceania",
 };

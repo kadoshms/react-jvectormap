@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { iranMill, README } from "@react-jvectormap/maps";
-import { iranMill, README } from "@react-jvectormap/iran";
+import { iranMill } from "@react-jvectormap/iran";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,4 +12,5 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: iranMill,
   fileName: "iranMill",
+  country: "iran",
 };

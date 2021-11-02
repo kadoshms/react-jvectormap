@@ -2,12 +2,6 @@ import { VectorMap } from "@react-jvectormap/core";
 import {
   northAmericaMill,
   northAmericaMerc,
-  README,
-} from "@react-jvectormap/maps";
-import {
-  northAmericaMill,
-  northAmericaMerc,
-  README,
 } from "@react-jvectormap/northamerica";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
@@ -21,10 +15,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: northAmericaMill,
   fileName: "northAmericaMill",
+  country: "northamerica",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: northAmericaMerc,
   fileName: "northAmericaMerc",
+  country: "northamerica",
 };

@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { inMill, inMerc, README } from "@react-jvectormap/maps";
-import { inMill, inMerc, README } from "@react-jvectormap/india";
+import { inMill, inMerc } from "@react-jvectormap/india";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: inMill,
   fileName: "inMill",
+  country: "india",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: inMerc,
   fileName: "inMerc",
+  country: "india",
 };

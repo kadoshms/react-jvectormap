@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { seMill, seMerc, README } from "@react-jvectormap/maps";
-import { seMill, seMerc, README } from "@react-jvectormap/sweden";
+import { seMill, seMerc } from "@react-jvectormap/sweden";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: seMill,
   fileName: "seMill",
+  country: "sweden",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: seMerc,
   fileName: "seMerc",
+  country: "sweden",
 };

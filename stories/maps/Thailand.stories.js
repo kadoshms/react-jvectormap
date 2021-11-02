@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { thMill, thMerc, README } from "@react-jvectormap/maps";
-import { thMill, thMerc, README } from "@react-jvectormap/thailand";
+import { thMill, thMerc } from "@react-jvectormap/thailand";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: thMill,
   fileName: "thMill",
+  country: "thailand",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: thMerc,
   fileName: "thMerc",
+  country: "thailand",
 };

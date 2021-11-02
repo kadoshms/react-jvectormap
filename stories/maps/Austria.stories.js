@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { atMill, atMerc, README } from "@react-jvectormap/maps";
-import { atMill, atMerc, README } from "@react-jvectormap/austria";
+import { atMill, atMerc } from "@react-jvectormap/austria";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: atMill,
   fileName: "atMill",
+  country: "austria",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: atMerc,
   fileName: "atMerc",
+  country: "austria",
 };

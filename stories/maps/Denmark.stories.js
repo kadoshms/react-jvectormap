@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { dkMill, dkMerc, README } from "@react-jvectormap/maps";
-import { dkMill, dkMerc, README } from "@react-jvectormap/denmark";
+import { dkMill, dkMerc } from "@react-jvectormap/denmark";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: dkMill,
   fileName: "dkMill",
+  country: "denmark",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: dkMerc,
   fileName: "dkMerc",
+  country: "denmark",
 };

@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { cnMill, cnMerc, README } from "@react-jvectormap/maps";
-import { cnMill, cnMerc, README } from "@react-jvectormap/china";
+import { cnMill, cnMerc } from "@react-jvectormap/china";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: cnMill,
   fileName: "cnMill",
+  country: "china",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: cnMerc,
   fileName: "cnMerc",
+  country: "china",
 };

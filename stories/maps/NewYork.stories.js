@@ -1,14 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import {
-  usNyNewYorkMill,
-  usNyNewYorkMerc,
-  README,
-} from "@react-jvectormap/maps";
-import {
-  usNyNewYorkMill,
-  usNyNewYorkMerc,
-  README,
-} from "@react-jvectormap/newyork";
+import { usNyNewYorkMill, usNyNewYorkMerc } from "@react-jvectormap/newyork";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -21,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: usNyNewYorkMill,
   fileName: "usNyNewYorkMill",
+  country: "newyork",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: usNyNewYorkMerc,
   fileName: "usNyNewYorkMerc",
+  country: "newyork",
 };

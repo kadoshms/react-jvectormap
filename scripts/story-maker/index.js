@@ -11,7 +11,7 @@ const getMaps = (source) =>
     fs
         .readdirSync(source, { withFileTypes: true })
         .filter((dirent) => dirent.name !== "index.ts")
-        .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index'].find(x => dirent.name.includes(x))))
+        .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index', 'README'].find(x => dirent.name.includes(x))))
         .map((dirent) => dirent.name.split(".")[0]);
 
 const countries = getDirectories(mapsSource);
@@ -38,11 +38,11 @@ countries.forEach((country) => {
   const exports = projections.map(([suff, proj], i) => `export const ${proj} = MapTemplate.bind({});
   ${proj}.args = {
     map: ${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))},
-    fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}'
+    fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}',
+    country: '${country.toLowerCase()}',
   };
 `).join('\n');
   const story = `import { VectorMap } from "@react-jvectormap/core";
-  import { ${imports} } from "@react-jvectormap/maps";
   import { ${imports} } from "@react-jvectormap/${country.toLowerCase()}";
   import { MapTemplate } from "../components/MapContainer/MapTemplate";
 

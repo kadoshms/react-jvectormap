@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { nzMill, nzMerc, README } from "@react-jvectormap/maps";
-import { nzMill, nzMerc, README } from "@react-jvectormap/newziland";
+import { nzMill, nzMerc } from "@react-jvectormap/newziland";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: nzMill,
   fileName: "nzMill",
+  country: "newziland",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: nzMerc,
   fileName: "nzMerc",
+  country: "newziland",
 };

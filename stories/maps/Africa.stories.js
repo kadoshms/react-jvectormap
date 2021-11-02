@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { africaMill, africaMerc, README } from "@react-jvectormap/maps";
-import { africaMill, africaMerc, README } from "@react-jvectormap/africa";
+import { africaMill, africaMerc } from "@react-jvectormap/africa";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: africaMill,
   fileName: "africaMill",
+  country: "africa",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: africaMerc,
   fileName: "africaMerc",
+  country: "africa",
 };

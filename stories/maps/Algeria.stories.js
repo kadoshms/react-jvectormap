@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { dzMill, README } from "@react-jvectormap/maps";
-import { dzMill, README } from "@react-jvectormap/algeria";
+import { dzMill } from "@react-jvectormap/algeria";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,4 +12,5 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: dzMill,
   fileName: "dzMill",
+  country: "algeria",
 };

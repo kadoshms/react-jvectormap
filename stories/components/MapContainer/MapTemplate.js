@@ -11,11 +11,13 @@ const codeBlockStyle = {
 };
 
 export const MapTemplate = (args) => {
-  const { fileName, ...rest } = args;
+  const { fileName, country, ...rest } = args;
   return (
     <div>
       <pre style={codeBlockStyle}>
-        import {fileName} from '{`@react-jvectormap/maps/${fileName}`}';
+        import {"{ "}
+        {fileName}
+        {" }"} from '{`@react-jvectormap/${country}`}';
       </pre>
       <MapContainer description={args.description}>
         <VectorMap {...rest} />

@@ -1,6 +1,5 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { esMill, esMerc, README } from "@react-jvectormap/maps";
-import { esMill, esMerc, README } from "@react-jvectormap/spain";
+import { esMill, esMerc } from "@react-jvectormap/spain";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -13,10 +12,12 @@ export const Miller = MapTemplate.bind({});
 Miller.args = {
   map: esMill,
   fileName: "esMill",
+  country: "spain",
 };
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
   map: esMerc,
   fileName: "esMerc",
+  country: "spain",
 };
