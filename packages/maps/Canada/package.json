@@ -1,0 +1,9 @@
+{
+  "name": "@react-jvectormap/canada",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  }
+}
