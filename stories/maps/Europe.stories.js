@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { europeMill, europeMerc } from "@react-jvectormap/maps";
+import { europeMill, europeMerc, README } from "@react-jvectormap/maps";
+import { europeMill, europeMerc, README } from "@react-jvectormap/europe";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

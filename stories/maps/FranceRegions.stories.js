@@ -1,5 +1,10 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { frRegionsMill, frRegionsMerc } from "@react-jvectormap/maps";
+import { frRegionsMill, frRegionsMerc, README } from "@react-jvectormap/maps";
+import {
+  frRegionsMill,
+  frRegionsMerc,
+  README,
+} from "@react-jvectormap/franceregions";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

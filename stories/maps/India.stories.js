@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { inMill, inMerc } from "@react-jvectormap/maps";
+import { inMill, inMerc, README } from "@react-jvectormap/maps";
+import { inMill, inMerc, README } from "@react-jvectormap/india";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

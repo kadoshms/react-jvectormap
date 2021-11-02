@@ -1,5 +1,14 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { southAmericaMill, southAmericaMerc } from "@react-jvectormap/maps";
+import {
+  southAmericaMill,
+  southAmericaMerc,
+  README,
+} from "@react-jvectormap/maps";
+import {
+  southAmericaMill,
+  southAmericaMerc,
+  README,
+} from "@react-jvectormap/southamerica";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

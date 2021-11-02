@@ -1,5 +1,10 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { continentsMill, continentsMerc } from "@react-jvectormap/maps";
+import { continentsMill, continentsMerc, README } from "@react-jvectormap/maps";
+import {
+  continentsMill,
+  continentsMerc,
+  README,
+} from "@react-jvectormap/continents";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

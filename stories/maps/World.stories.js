@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { worldMill, worldMerc } from "@react-jvectormap/maps";
+import { worldMill, worldMerc, README } from "@react-jvectormap/maps";
+import { worldMill, worldMerc, README } from "@react-jvectormap/world";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

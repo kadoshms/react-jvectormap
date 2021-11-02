@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { iranMill } from "@react-jvectormap/maps";
+import { iranMill, README } from "@react-jvectormap/maps";
+import { iranMill, README } from "@react-jvectormap/iran";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

@@ -1,5 +1,14 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { usIlChicagoMill, usIlChicagoMerc } from "@react-jvectormap/maps";
+import {
+  usIlChicagoMill,
+  usIlChicagoMerc,
+  README,
+} from "@react-jvectormap/maps";
+import {
+  usIlChicagoMill,
+  usIlChicagoMerc,
+  README,
+} from "@react-jvectormap/chicago";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

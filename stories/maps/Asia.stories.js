@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { asiaMill, asiaMerc } from "@react-jvectormap/maps";
+import { asiaMill, asiaMerc, README } from "@react-jvectormap/maps";
+import { asiaMill, asiaMerc, README } from "@react-jvectormap/asia";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

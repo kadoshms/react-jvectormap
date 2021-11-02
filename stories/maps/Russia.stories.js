@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { ruMill, ruMerc } from "@react-jvectormap/maps";
+import { ruMill, ruMerc, README } from "@react-jvectormap/maps";
+import { ruMill, ruMerc, README } from "@react-jvectormap/russia";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

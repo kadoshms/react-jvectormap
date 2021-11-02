@@ -2,16 +2,17 @@ const fs = require("fs");
 const mapsSource = `../../packages/maps/`;
 
 const getDirectories = (source) =>
-  fs
-    .readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+    fs
+        .readdirSync(source, { withFileTypes: true })
+        .filter((dirent) => dirent.isDirectory())
+        .map((dirent) => dirent.name);
 
 const getMaps = (source) =>
-  fs
-    .readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index', 'README'].find(x => dirent.name.includes(x))))
-    .map((dirent) => dirent.name.split(".")[0]);
+    fs
+        .readdirSync(source, { withFileTypes: true })
+        .filter((dirent) => dirent.name !== "index.ts")
+        .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index'].find(x => dirent.name.includes(x))))
+        .map((dirent) => dirent.name.split(".")[0]);
 
 const countries = getDirectories(mapsSource);
 
@@ -40,7 +41,8 @@ countries.forEach((country) => {
     fileName: '${maps.find(x => x.toLowerCase().includes(suff.toLowerCase()))}'
   };
 `).join('\n');
-        const story = `import { VectorMap } from "@react-jvectormap/core";
+  const story = `import { VectorMap } from "@react-jvectormap/core";
+  import { ${imports} } from "@react-jvectormap/maps";
   import { ${imports} } from "@react-jvectormap/${country.toLowerCase()}";
   import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
@@ -53,39 +55,7 @@ countries.forEach((country) => {
   ${exports}
   `;
 
-  const mapList = maps.map(x => `   - ${x}`).join('  \n');
-
   const fileName = `${country}.stories.js`;
-  const readme = `# @react-jvectormap/africa
-
-A collection of JvectorMap maps of ${country}.
-
-Available Maps:
-${mapList}
-
-## Installation:
-\`\`\`
-    yarn add @react-jvectormap/${country.toLowerCase()}
-\`\`\`
-
-or:
-
-\`\`\`
-    npm install --save @react-jvectormap/${country.toLowerCase()}
-\`\`\`
-
-## Usage
-
-\`\`\`
-    import { ${maps[0]} } from '@react-jvectormap/${country.toLowerCase()}';
- \`\`\`   
-
-or:
-
-\`\`\`
-    import ${maps[0]} from '@react-jvectormap/${country.toLowerCase()}/dist/${maps[0]}';
- \`\`\`   
-`
-
-  fs.writeFileSync(`../../packages/maps/${country}/README.md`, readme);
+  fs.writeFileSync(`../../stories/maps/${fileName}`, story);
 });
+

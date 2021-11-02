@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { krMill, krMerc } from "@react-jvectormap/maps";
+import { krMill, krMerc, README } from "@react-jvectormap/maps";
+import { krMill, krMerc, README } from "@react-jvectormap/southkorea";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

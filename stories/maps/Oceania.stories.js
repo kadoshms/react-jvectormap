@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { oceaniaMill, oceaniaMerc } from "@react-jvectormap/maps";
+import { oceaniaMill, oceaniaMerc, README } from "@react-jvectormap/maps";
+import { oceaniaMill, oceaniaMerc, README } from "@react-jvectormap/oceania";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

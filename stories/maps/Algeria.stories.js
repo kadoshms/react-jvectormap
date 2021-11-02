@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { dzMill } from "@react-jvectormap/maps";
+import { dzMill, README } from "@react-jvectormap/maps";
+import { dzMill, README } from "@react-jvectormap/algeria";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

@@ -226,14 +226,14 @@ or
 
 ### Usage
 
-`import { usMill } from '@react-jvectormap/maps`;
+`import { esMill } from '@react-jvectormap/spain`;
 
 Or, for bundling optimizations purposes (Recommended!):
 
-`import usMill from "@react-jvectormap/maps/dist/UnitedStates/usMill.json";`
+`import esMill from "@react-jvectormap/spain/dist/esMill.json";`
 
 ```
-    <VectorMap map={usMill} ... />
+    <VectorMap map={esMill} ... />
 ```
 
 ### Available Prebuilt Maps

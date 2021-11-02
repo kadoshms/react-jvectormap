@@ -1,5 +1,10 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { itRegionsMill, itRegionsMerc } from "@react-jvectormap/maps";
+import { itRegionsMill, itRegionsMerc, README } from "@react-jvectormap/maps";
+import {
+  itRegionsMill,
+  itRegionsMerc,
+  README,
+} from "@react-jvectormap/italyregions";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

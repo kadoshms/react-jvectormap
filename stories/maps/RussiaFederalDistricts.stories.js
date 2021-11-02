@@ -1,5 +1,10 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { ruFdMill, ruFdMerc } from "@react-jvectormap/maps";
+import { ruFdMill, ruFdMerc, README } from "@react-jvectormap/maps";
+import {
+  ruFdMill,
+  ruFdMerc,
+  README,
+} from "@react-jvectormap/russiafederaldistricts";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

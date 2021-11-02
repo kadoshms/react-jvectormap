@@ -1,10 +1,10 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { puertoRico, README } from "@react-jvectormap/maps";
-import { puertoRico, README } from "@react-jvectormap/puertorico";
+import {} from "@react-jvectormap/maps";
+import {} from "@react-jvectormap/dist";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
-  title: "maps/Map/PuertoRico",
+  title: "maps/Map/dist",
   component: VectorMap,
   argTypes: {},
 };

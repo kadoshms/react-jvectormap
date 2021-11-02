@@ -1,5 +1,12 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { usMerc, usMill, usLcc, usAea } from "@react-jvectormap/maps";
+import { useMerc, usMill, usLcc, usAea, README } from "@react-jvectormap/maps";
+import {
+  useMerc,
+  usMill,
+  usLcc,
+  usAea,
+  README,
+} from "@react-jvectormap/unitedstates";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
@@ -16,7 +23,7 @@ Miller.args = {
 
 export const Mercator = MapTemplate.bind({});
 Mercator.args = {
-  map: usMerc,
+  map: useMerc,
   fileName: "useMerc",
 };
 

@@ -1,5 +1,14 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { usNyNewYorkMill, usNyNewYorkMerc } from "@react-jvectormap/maps";
+import {
+  usNyNewYorkMill,
+  usNyNewYorkMerc,
+  README,
+} from "@react-jvectormap/maps";
+import {
+  usNyNewYorkMill,
+  usNyNewYorkMerc,
+  README,
+} from "@react-jvectormap/newyork";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

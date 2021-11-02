@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { cnMill, cnMerc } from "@react-jvectormap/maps";
+import { cnMill, cnMerc, README } from "@react-jvectormap/maps";
+import { cnMill, cnMerc, README } from "@react-jvectormap/china";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

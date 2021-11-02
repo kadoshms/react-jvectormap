@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { auMill, auMerc } from "@react-jvectormap/maps";
+import { auMill, auMerc, README } from "@react-jvectormap/maps";
+import { auMill, auMerc, README } from "@react-jvectormap/australia";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

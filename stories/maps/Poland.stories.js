@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { plMill, plMerc } from "@react-jvectormap/maps";
+import { plMill, plMerc, README } from "@react-jvectormap/maps";
+import { plMill, plMerc, README } from "@react-jvectormap/poland";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { caMill, caMerc, caLcc } from "@react-jvectormap/maps";
+import { caMill, caMerc, caLcc, README } from "@react-jvectormap/maps";
+import { caMill, caMerc, caLcc, README } from "@react-jvectormap/canada";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

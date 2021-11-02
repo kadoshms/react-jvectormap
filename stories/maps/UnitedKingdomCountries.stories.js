@@ -1,5 +1,14 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { ukCountriesMill, ukCountriesMerc } from "@react-jvectormap/maps";
+import {
+  ukCountriesMill,
+  ukCountriesMerc,
+  README,
+} from "@react-jvectormap/maps";
+import {
+  ukCountriesMill,
+  ukCountriesMerc,
+  README,
+} from "@react-jvectormap/unitedkingdomcountries";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

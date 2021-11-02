@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { africaMill, africaMerc } from "@react-jvectormap/maps";
+import { africaMill, africaMerc, README } from "@react-jvectormap/maps";
+import { africaMill, africaMerc, README } from "@react-jvectormap/africa";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {

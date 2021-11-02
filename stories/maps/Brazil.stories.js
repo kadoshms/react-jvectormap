@@ -1,5 +1,6 @@
 import { VectorMap } from "@react-jvectormap/core";
-import { brMill } from "@react-jvectormap/maps";
+import { brMill, README } from "@react-jvectormap/maps";
+import { brMill, README } from "@react-jvectormap/brazil";
 import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
 export default {
