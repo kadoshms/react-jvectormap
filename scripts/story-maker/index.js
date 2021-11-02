@@ -1,5 +1,5 @@
 const fs = require("fs");
-const mapsSource = `../../packages/maps/src/`;
+const mapsSource = `../../packages/maps/`;
 
 const getDirectories = (source) =>
   fs
@@ -10,7 +10,7 @@ const getDirectories = (source) =>
 const getMaps = (source) =>
   fs
     .readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.name !== "index.ts")
+    .filter((dirent) => !(['tsconfig', 'package', 'dist', 'index'].find(x => dirent.name.includes(x))))
     .map((dirent) => dirent.name.split(".")[0]);
 
 const countries = getDirectories(mapsSource);
@@ -41,7 +41,7 @@ countries.forEach((country) => {
   };
 `).join('\n');
         const story = `import { VectorMap } from "@react-jvectormap/core";
-  import { ${imports} } from "@react-jvectormap/maps";
+  import { ${imports} } from "@react-jvectormap/${country.toLowerCase()}";
   import { MapTemplate } from "../components/MapContainer/MapTemplate";
 
   export default {
