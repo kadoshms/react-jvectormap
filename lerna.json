@@ -1,7 +1,9 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/maps/*"
   ],
+  "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "independent",
   "command": {

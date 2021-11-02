@@ -19,7 +19,8 @@
     "immer": "^9.0.6"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/maps/*"
   ],
   "lint-staged": {
     "packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
