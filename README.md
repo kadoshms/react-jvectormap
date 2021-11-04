@@ -4,6 +4,9 @@
 
 [![npm version](https://badge.fury.io/js/@react-jvectormap%2Fcore.svg)](https://badge.fury.io/js/@react-jvectormap%2Fcore)
 
+
+**The library is still in Alpha stage!**
+
 ## About
 
 A simple wrapper for [jvectormap](http://jvectormap.com/)
