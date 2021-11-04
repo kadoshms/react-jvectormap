@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/northamerica
 
-A collection of JvectorMap maps of NorthAmerica.
+A collection of JvectorMap maps of North America.
 
 Available Maps:
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/poland
 
 A collection of JvectorMap maps of Poland.
 

@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/russiafederaldistricts
 
-A collection of JvectorMap maps of RussiaFederalDistricts.
+A collection of JvectorMap maps of Russia Federal Districts.
 
 Available Maps:
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/brazil
 
 A collection of JvectorMap maps of Brazil.
 

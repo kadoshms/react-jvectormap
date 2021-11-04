@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/colombia
 
 A collection of JvectorMap maps of Colombia.
 

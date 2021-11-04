@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/venezuela
 
 A collection of JvectorMap maps of Venezuela.
 

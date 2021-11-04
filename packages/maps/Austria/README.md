@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/austria
 
 A collection of JvectorMap maps of Austria.
 

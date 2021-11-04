@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/asia
 
 A collection of JvectorMap maps of Asia.
 

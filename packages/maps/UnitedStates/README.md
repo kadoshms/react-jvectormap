@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/unitedstates
 
-A collection of JvectorMap maps of UnitedStates.
+A collection of JvectorMap maps of United States.
 
 Available Maps:
 

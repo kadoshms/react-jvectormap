@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/sweden
 
 A collection of JvectorMap maps of Sweden.
 

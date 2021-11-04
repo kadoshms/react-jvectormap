@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/switzerland
 
 A collection of JvectorMap maps of Switzerland.
 

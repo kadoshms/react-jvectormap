@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/thailand
 
 A collection of JvectorMap maps of Thailand.
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/spain
 
 A collection of JvectorMap maps of Spain.
 

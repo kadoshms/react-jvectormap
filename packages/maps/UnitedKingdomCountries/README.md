@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/unitedkingdomcountries
 
-A collection of JvectorMap maps of UnitedKingdomCountries.
+A collection of JvectorMap maps of United Kingdom Countries.
 
 Available Maps:
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/southafrica
 
 A collection of JvectorMap maps of SouthAfrica.
 

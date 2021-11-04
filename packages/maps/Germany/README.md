@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/germany
 
 A collection of JvectorMap maps of Germany.
 

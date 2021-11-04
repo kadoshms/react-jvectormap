@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/oceania
 
 A collection of JvectorMap maps of Oceania.
 

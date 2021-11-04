@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/southamerica
 
 A collection of JvectorMap maps of SouthAmerica.
 

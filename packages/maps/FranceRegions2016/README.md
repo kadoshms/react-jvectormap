@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/franceregions2016
 
-A collection of JvectorMap maps of FranceRegions2016.
+A collection of JvectorMap maps of France Regions 2016.
 
 Available Maps:
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/newziland
 
 A collection of JvectorMap maps of NewZiland.
 

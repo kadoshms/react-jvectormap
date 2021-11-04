@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/europe
 
 A collection of JvectorMap maps of Europe.
 

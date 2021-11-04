@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/canada
 
 A collection of JvectorMap maps of Canada.
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/chicago
 
 A collection of JvectorMap maps of Chicago.
 

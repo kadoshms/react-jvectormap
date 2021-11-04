@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/portugal
 
 A collection of JvectorMap maps of Portugal.
 

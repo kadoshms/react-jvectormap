@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/netherlands
 
 A collection of JvectorMap maps of Netherlands.
 

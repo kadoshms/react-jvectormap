@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/southkorea
 
 A collection of JvectorMap maps of SouthKorea.
 

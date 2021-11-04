@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/argentina
 
 A collection of JvectorMap maps of Argentina.
 

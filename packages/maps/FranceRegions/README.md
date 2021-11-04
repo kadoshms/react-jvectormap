@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/franceregions
 
 A collection of JvectorMap maps of FranceRegions.
 

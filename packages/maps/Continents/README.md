@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/continents
 
 A collection of JvectorMap maps of Continents.
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/norway
 
 A collection of JvectorMap maps of Norway.
 

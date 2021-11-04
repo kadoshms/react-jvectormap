@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/india
 
 A collection of JvectorMap maps of India.
 

@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/ukregions
 
 A collection of JvectorMap maps of UkRegions.
 

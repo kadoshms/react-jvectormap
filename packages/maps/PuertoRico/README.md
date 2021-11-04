@@ -1,6 +1,6 @@
-# @react-jvectormap/africa
+# @react-jvectormap/puertorico
 
-A collection of JvectorMap maps of PuertoRico.
+A collection of JvectorMap maps of Puerto Rico.
 
 Available Maps:
 

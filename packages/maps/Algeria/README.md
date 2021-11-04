@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/algeria
 
 A collection of JvectorMap maps of Algeria.
 

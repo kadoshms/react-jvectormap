@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/iran
 
 A collection of JvectorMap maps of Iran.
 

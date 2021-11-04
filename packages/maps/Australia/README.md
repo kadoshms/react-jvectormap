@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/australia
 
 A collection of JvectorMap maps of Australia.
 

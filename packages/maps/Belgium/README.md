@@ -1,4 +1,4 @@
-# @react-jvectormap/africa
+# @react-jvectormap/belgium
 
 A collection of JvectorMap maps of Belgium.
 
