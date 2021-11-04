@@ -3,8 +3,7 @@
 ![Logo](logo.png)
 
 [![npm version](https://badge.fury.io/js/@react-jvectormap%2Fcore.svg)](https://badge.fury.io/js/@react-jvectormap%2Fcore)
-**
-The library is still in Alpha stage!**
+**The library is still in Alpha stage!**
 
 ## About
 
