@@ -7,7 +7,7 @@
   "author": "Mor Kadosh <kadoshms@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --parallel",
     "test": "lerna run test",
     "pre-commit": "lint-staged",
     "storybook": "start-storybook -s ./stories/static -p 6006",
