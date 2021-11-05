@@ -284,6 +284,7 @@ Or, for bundling optimizations purposes (Recommended!):
 | Sweden                 | seMill             | seMerc             | -       | -      | -          | @react-jvectormap/sweden                 |
 | Switzerland            | chMill             | chMerc             | -       | -      | -          | @react-jvectormap/switzerland            |
 | Thailand               | thMill             | thMerc             | -       | -      | -          | @react-jvectormap/thailand               |
+| Turkey                 | trMill             | -                  | -       | -      | -          | @react-jvectormap/turkey                 |
 | UkRegions              | ukRegionsMill      | ukRegionsMerc      | -       | -      | -          | @react-jvectormap/ukregions              |
 | UnitedKingdomCountries | ukCountriesMill    | ukCountriesMerc    | -       | -      | -          | @react-jvectormap/unitedkingdomcountries |
 | UnitedStates           | usAea              | usMill             | useMerc | usLcc  | -          | @react-jvectormap/unitedstates           |
