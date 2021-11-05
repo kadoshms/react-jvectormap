@@ -23,22 +23,13 @@ export const VectorMap: FC<IVectorMapProps> = ({
         map: name,
         ...props,
       });
-      if (mapRef) {
+      if (map && mapRef?.current === null) {
         mapRef.current = $(mapContainer).vectorMap(
           "get",
           "mapObject",
         ) as unknown as MapObject;
       }
     }
-
-    return () => {
-      if (mapContainer) {
-        const mapObject = $(mapContainer).vectorMap("remove");
-        if (mapObject) {
-          mapObject.remove();
-        }
-      }
-    };
   }, [map, mapRef, props]);
 
   return (

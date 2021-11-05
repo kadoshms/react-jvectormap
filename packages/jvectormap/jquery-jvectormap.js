@@ -55,7 +55,7 @@ export const loadJVectorMap = ($) =>
           map,
           Array.prototype.slice.call(arguments, 2),
         );
-      } else {
+      } else if (!map) {
         options = options || {};
         options.container = this;
         map = new jvm.Map(options);
