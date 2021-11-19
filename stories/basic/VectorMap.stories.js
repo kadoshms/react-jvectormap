@@ -26,6 +26,11 @@ import {
   FocusOnCountriesTemplate,
 } from "./VectorMapExamples/FocusOnCountries";
 
+import {
+  default as FetchDataArgs,
+  FetchDataTemplate,
+} from "./VectorMapExamples/FetchData";
+
 import { VectorMapTemplate } from "../components/MapContainer/VectorMapTemplate";
 
 export default {
@@ -72,3 +77,6 @@ DynamicRegionStyle.args = DynamicRegionStyleArgs;
 
 export const FocusOnCountries = FocusOnCountriesTemplate.bind({});
 FocusOnCountries.args = FocusOnCountriesArgs;
+
+export const FetchData = FetchDataTemplate.bind({});
+FetchData.args = FetchDataArgs;
