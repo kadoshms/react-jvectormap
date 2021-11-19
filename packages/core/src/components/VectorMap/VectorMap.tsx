@@ -1,4 +1,4 @@
-import React, { FC, Ref, useLayoutEffect, useRef } from "react";
+import React, { FC, Ref, useEffect, useLayoutEffect, useRef } from "react";
 import $ from "jquery";
 import { IVectorMapProps, MapObject } from "../../types";
 import { MapContainer } from "../MapContainer";
@@ -8,6 +8,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
   mapRef,
   style,
   className,
+  series,
   ...props
 }) => {
   const containerRef = useRef<JQuery | null>(null);
@@ -21,6 +22,7 @@ export const VectorMap: FC<IVectorMapProps> = ({
     if (mapContainer) {
       $(mapContainer).vectorMap({
         map: name,
+        series,
         ...props,
       });
       if (map && mapRef?.current === null) {
@@ -30,7 +32,25 @@ export const VectorMap: FC<IVectorMapProps> = ({
         ) as unknown as MapObject;
       }
     }
-  }, [map, mapRef, props]);
+  }, [map, mapRef, props, series]);
+
+  useEffect(() => {
+    const mapContainer = containerRef.current;
+    if (series && mapContainer) {
+      const map = $(mapContainer).vectorMap("get", "mapObject");
+      const { markers = [], regions = [] } = series;
+      regions.forEach(({ values }, index) => {
+        if (values && map.series?.regions) {
+          map.series?.regions[index]?.clearAndSet(values);
+        }
+      });
+      markers.forEach(({ values }, index) => {
+        if (values && map.series?.markers) {
+          map.series?.markers[index]?.clearAndSet(values);
+        }
+      });
+    }
+  }, [series]);
 
   return (
     <MapContainer
