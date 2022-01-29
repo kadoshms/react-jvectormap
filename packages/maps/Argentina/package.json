@@ -1,6 +1,6 @@
 {
   "name": "@react-jvectormap/argentina",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {

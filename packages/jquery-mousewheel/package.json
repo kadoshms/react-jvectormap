@@ -1,6 +1,6 @@
 {
   "name": "@react-jvectormap/jquery-mousewheel",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "author": {
     "name": "jQuery Foundation and other contributors",
     "url": "https://github.com/jquery/jquery-mousewheel/blob/master/AUTHORS.txt"
