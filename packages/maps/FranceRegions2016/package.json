@@ -2,6 +2,7 @@
   "name": "@react-jvectormap/franceregions2016",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "sideEffects": false,
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc"
