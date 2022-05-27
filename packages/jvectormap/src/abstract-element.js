@@ -65,7 +65,9 @@ jvm.AbstractElement.prototype.get = function(property){
  * @private
  */
 jvm.AbstractElement.prototype.applyAttr = function(property, value){
-  this.node.setAttribute(property, value);
+  if (!Number.isNaN(value)) {
+    this.node.setAttribute(property, value);
+  }
 };
 
 jvm.AbstractElement.prototype.remove = function(){
