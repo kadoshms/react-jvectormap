@@ -23,7 +23,7 @@ export * from "./Italy";
 export * from "./ItalyRegions";
 export * from "./Netherlands";
 export * from "./NewYork";
-export * from "./NewZiland";
+export * from "./NewZealand";
 export * from "./NorthAmerica";
 export * from "./Norway";
 export * from "./Oceania";

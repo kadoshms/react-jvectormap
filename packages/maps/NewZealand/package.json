@@ -1,6 +1,6 @@
 {
-  "name": "@react-jvectormap/newziland",
-  "version": "1.0.1",
+  "name": "@react-jvectormap/newzealand",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "sideEffects": false,
   "license": "MIT",
