@@ -226,7 +226,7 @@ or
 
 ### Usage
 
-`import { esMill } from '@react-jvectormap/spain`;
+`import { esMill } from '@react-jvectormap/spain'`;
 
 Or, for bundling optimizations purposes (Recommended!):
 
