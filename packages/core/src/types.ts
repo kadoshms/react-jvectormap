@@ -349,7 +349,7 @@ export interface ISeries {
   markers?: IAttributeSeries[];
 }
 
-type Scale = { [key: string]: string } | number[];
+type Scale = { [key: string]: string } | number[] | string[];
 
 type Values = { [key: string]: string | number };
 
