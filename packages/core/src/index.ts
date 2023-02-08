@@ -4,3 +4,5 @@ export * from "./components";
 export * from "./utils";
 
 loadJVectorMap($);
+
+// test
