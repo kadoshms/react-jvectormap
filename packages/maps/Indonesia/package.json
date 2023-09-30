@@ -1,0 +1,13 @@
+{
+  "name": "@react-jvectormap/indonesia",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "sideEffects": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
