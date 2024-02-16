@@ -1,4 +1,7 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.ts"),
@@ -18,7 +21,11 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
@@ -27,5 +34,5 @@ module.exports = {
     "react-dom": "reactDOM",
     jquery: "jquery",
   },
-  plugins: []
+  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 };

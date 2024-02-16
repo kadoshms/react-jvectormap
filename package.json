@@ -61,6 +61,7 @@
     "jquery": "^3.6.0",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.2",
+    "mini-css-extract-plugin": "^2.8.0",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "sass": "^1.42.0",
