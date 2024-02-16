@@ -16,6 +16,10 @@ or
 
 `yarn add @react-jvectormap/core jquery`
 
+Import `main.css` in yours app entry point
+
+`import @react-jvectormap/core/dist/main.css`
+
 To see examples, and play with the library, visit the project Storybook:
 
 https://61685594b935d4003a3a6f2c-fcgvwodumn.chromatic.com/

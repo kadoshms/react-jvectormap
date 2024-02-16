@@ -22,7 +22,8 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && yarn run build:types && yarn run build:bundle",
-    "build:bundle": "webpack --mode development",
+    "build:bundle:dev": "webpack --mode development",
+    "build:bundle": "NODE_ENV=production webpack --mode production",
     "build:types": "tsc --emitDeclarationOnly"
   },
   "bugs": {
