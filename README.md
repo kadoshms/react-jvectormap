@@ -49,6 +49,10 @@ export interface IVectorMapProps extends IMapComponent {
    */
   backgroundColor?: string;
   /**
+   * Indicates whether zoom buttons are visible on map. Default value is true.
+   */
+  zoomButtons?: boolean;
+  /**
    * Indicates the minimum zoom ratio which could be reached zooming the map. Default value is 1.
    */
   zoomMin?: number;
