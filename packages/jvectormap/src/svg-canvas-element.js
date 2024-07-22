@@ -29,7 +29,7 @@ jvm.SVGCanvasElement.prototype.applyTransformParams = function (
   if (!isNaN(transX) && !isNaN(transY) && !isNaN(scale)) {
     this.rootElement.node.setAttribute(
       "transform",
-      "scale(" + scale + ") translate(" + transX + ", " + transY + ")",
+      "scale(" + scale + ") translate(" + transX + "," + transY + ")",
     );
   }
 };
