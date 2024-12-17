@@ -264,6 +264,7 @@ Or, for bundling optimizations purposes (Recommended!):
 | FranceRegions2016      | frRegions_2016Mill | frRegions_2016Merc | -       | -      | -          | @react-jvectormap/franceregions2016      |
 | Germany                | deMill             | deMerc             | -       | -      | -          | @react-jvectormap/germany                |
 | India                  | inMill             | inMerc             | -       | -      | -          | @react-jvectormap/india                  |
+| Indonesia              | idnMill            | idnMerc            | -       | -      | -          | @react-jvectormap/indonesia              |
 | Iran                   | iranMill           | -                  | -       | -      | -          | @react-jvectormap/iran                   |
 | Italy                  | itMill             | itMerc             | -       | -      | -          | @react-jvectormap/italy                  |
 | ItalyRegions           | itRegionsMill      | itRegionsMerc      | -       | -      | -          | @react-jvectormap/italyregions           |
